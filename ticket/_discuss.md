@@ -51,13 +51,19 @@ week-1~4.md 존재. missions 는 한 주차만 읽음(P1 부합). 가벼운 점�
 
 ## 덩어리 B — thinking-partner + skill-creator (메타 도구)
 
-### ☐ B1. skill-creator 축약 수준 (005)
-Anthropic 공식 skill-creator 를 얼마나 덜어낼지. P1 에 따라 대폭 축약 전제.
-- 먼저: 공식 원본 어디 있는지 확인 (docs vs 레포).
+### ✅ B1. skill-creator 축약 → 대폭 경량 (평가·loop 제외)
+다른 세션에서 진행 중. 공식 `skill-creator` 를 기준으로만 삼고
+평가(eval)·description 최적화 루프·서브에이전트 병렬 등 고급은 전부 제외,
+"3문 인터뷰 → SKILL.md 한 장" 수준. 상세는 [[005-skill-creator]].
+> 2026-07-03 확정.
 
-### ☐ B2. thinking-partner ↔ skill-creator 경계 (002/005)
-어디까지 "범위 좁히기"(thinking-partner)고 어디부터 "실제 생성"(skill-creator)인가.
-- 잠정: 흐릿함→또렷 = thinking-partner, 또렷한 스펙→SKILL.md = skill-creator. 핸드오프 지점 1개.
+### ✅ B2. thinking-partner ↔ skill-creator 경계 → 명확화 vs 생성
+- **thinking-partner**: 흐릿함 → 또렷한 미니 스펙(뭘·트리거·15분 범위). 명확화·범위 담당.
+- **skill-creator**: 또렷한 스펙 → SKILL.md 한 장. 생성 담당. (005 step1 = 흐릿하면 thinking-partner 로)
+- 핸드오프 지점 1개. 양쪽 문구 맞추기 남음.
+- thinking-partner 레퍼런스: vmc `grilling`(한질문+추천답), Rhim80 `thinking-partner`(가정 짚기·요약).
+  노트 워크스페이스 탐색·무한 grilling 은 P1 로 덜어냄.
+> 2026-07-03 확정. 상세 [[002-g23-thinking-partner]].
 
 ---
 
