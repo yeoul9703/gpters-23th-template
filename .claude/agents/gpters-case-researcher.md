@@ -17,7 +17,8 @@ tools: WebFetch, WebSearch, Read, Grep, Glob
 1. 공개 태그 목록 페이지부터 훑는다 (WebFetch 가능 확인됨):
    `https://www.gpters.org/ai-study-post?tag_id=Q1d120GLVF32yKbIgqFxE`
    글 제목·작성자·링크를 열거하고, 주제와 맞는 후보를 고른다.
-2. 후보 글만 본문 열람을 **WebFetch로 시도**한다 (최대 5개).
+2. 후보 글만 본문을 연다 (최대 5개). **gpters.org 는 JS 렌더링 SPA 라 원본 URL 을 직접 WebFetch 하면 본문이 부실하다.**
+   반드시 Jina Reader 경유로 연다: WebFetch 대상 URL 을 `https://r.jina.ai/<게시글URL>` 로 바꿔서 호출 (본문 전문이 마크다운으로 옴).
    - 열리면: 한줄 요약과 클립 가치를 뽑는다. 본문 전문은 돌려주지 않는다.
    - 막히면(로그인 벽 등): 그 글에 **`본문: 로그인 필요`** 표시만 남긴다.
      브라우저 폴백(claude-in-chrome)은 네가 하지 않는다 — 메인 세션 몫.
