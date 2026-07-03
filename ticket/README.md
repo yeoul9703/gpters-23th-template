@@ -28,8 +28,6 @@
 - `003-g23-case-writer.md` — 담백한 사례글, AI 티 없이 · 경량 (개선) — task 013, 009 대기
 
 
-**실행 태스크 (Fable 5)**
-- `009-clip-gpters-writing-samples.md` (+`009-clip-gpters.task.json`) — 지피터스 사례글 클립 → case-writer 문체 레퍼런스
 
 **참고**
 - `001-example.md` — 견본 티켓 (감 잡으면 삭제)
@@ -55,3 +53,5 @@ gpters-case-researcher ─┴─▶ ticket/clips + g23-case-writer  (조사→�
 - `002-g23-thinking-partner.md` — 미니 스펙 + skill-creator 핸드오프 (task 011, 2026-07-03)
 - `007-agent-k-skill-researcher.md` — .claude/agents/ 읽기 전용 조사 에이전트 (task 012, 2026-07-03)
 - `008-agent-gpters-case-researcher.md` — 동상, C3 완결 확인 (task 012, 2026-07-03)
+- `009-clip-gpters-writing-samples.md` — 014 에 병합·초과 달성 (2026-07-03)
+- `014-clip-gpters-50.md` — 지피터스 사례 50개 클립 + `clips/_style-reference.md` (task 014, 2026-07-03)

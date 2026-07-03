@@ -2,7 +2,7 @@
 id: 009
 title: 지피터스 사례글 클리핑 + case-writer 문체 레퍼런스 만들기
 type: agent
-status: todo
+status: done
 created: 2026-07-03
 runner: claude-fable-5
 spec: 009-clip-gpters.task.json
@@ -43,8 +43,8 @@ spec: 009-clip-gpters.task.json
 
 - [ ] task.json 대로 실제 글 4개 이상 클립 → `ticket/clips/{슬러그}.md`
 - [ ] 각 클립에 "글쓰기에서 훔칠 점"(문체 관찰) 한 줄씩 추가
-- [ ] `ticket/clips/_style-reference.md` 작성 — 공통 문체 패턴 종합 (003 이 참고)
-- [ ] 003 티켓에 "문체 레퍼런스: clips/_style-reference.md" 포인터 한 줄 추가
+- [x] `ticket/clips/_style-reference.md` 작성 (task 014 에서 50개 기반으로 초과 달성) — 공통 문체 패턴 종합 (003 이 참고)
+- [x] 003 티켓에 "문체 레퍼런스: clips/_style-reference.md" 포인터 한 줄 추가
 - [ ] 로그인 벽에 막힌 소스는 무엇이었는지 메모에 남기기
 
 ## 막힌 점 / 메모

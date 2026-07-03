@@ -2,7 +2,7 @@
 id: 014
 title: 지피터스 사례 게시글 50개 클리핑 (009 확장·병합)
 type: mission
-status: doing
+status: done
 created: 2026-07-03
 ---
 
@@ -18,11 +18,11 @@ created: 2026-07-03
 
 ## 할 것 (체크리스트)
 
-- [ ] 공개 목록 페이지에서 게시글 URL 50개 이상 열거 (스카우트)
-- [ ] 50개 클립 생성 (병렬 5×10, clips/_template.md + '훔칠 점' 섹션)
-- [ ] `_style-reference.md` 종합 (009 의 must_include 4항목)
-- [ ] clips/README '모은 클립' 인덱스 갱신
-- [ ] 009 티켓 done 처리 (이 티켓이 산출물 흡수)
+- [x] 공개 목록 페이지에서 게시글 URL 50개 이상 열거 (스카우트)
+- [x] 50개 클립 생성 (병렬 5×10, clips/_template.md + '훔칠 점' 섹션)
+- [x] `_style-reference.md` 종합 (009 의 must_include 4항목)
+- [x] clips/README '모은 클립' 인덱스 갱신
+- [x] 009 티켓 done 처리 (이 티켓이 산출물 흡수)
 
 ## 막힌 점 / 메모
 
