@@ -24,13 +24,15 @@ gpters-case-researcher ─┴─▶ ticket/clips + g23-case-writer   (조사 →
 *2026-07-03 저녁 기준. 이후 확정된 것은 _discuss.md 확정 로그 참조.*
 
 - ~~g23-setup: 삭제 vs 리다이렉트~~ → **삭제 + 트리거 이전** 확정 (A1)
-- ~~지피터스 로그인 벽?~~ → 태그 목록 공개 / 프로필 로그인 벽 확인 (C3, 009 사전조사)
-- k-skill 접근: 로컬 클론 vs 원격 (C2, 열림)
-- 이름: case-post-writer → case-writer 통일 (C4·P2, 열림)
-- AI 상투구 최종 목록 확정 (C1, 열림)
+- ~~지피터스 로그인 벽?~~ → 태그 목록·본문 공개 / 프로필만 로그인 벽 (C3, 완결)
+- ~~k-skill 접근: 로컬 클론 vs 원격~~ → **원격 조회** 확정 (C2)
+- ~~이름: case-post-writer → case-writer 통일~~ → **개명 완료** (C4·P2, task 013)
+- ~~AI 상투구 최종 목록 확정~~ → **9개 확정, SKILL.md 인라인** (C1, task 013)
 
-## 현재 상태
+## 현재 상태 (2026-07-03 밤 갱신)
 
-- 브랜치 `worktree-ticket-folder` (원격 없음 → 로컬 전용)
-- main 에서 쓰려면: `git merge worktree-ticket-folder`
-- **실행 대기**: `ticket/009-clip-gpters.task.json` — Fable 5 세션이 그대로 실행 (클리핑→문체 레퍼런스)
+- `main` 단일 브랜치, 실행 큐(`ticket/_runplan.md`) **6/6 완료** — 스킬 5종·에이전트 2종·클립 50개 전부 반영
+- 열린 결정 없음. 티켓 논의(_discuss.md) 전부 ✅
+- 남은 것:
+  - 사용자가 SKILL.md 5종 톤 훑어보기 (비개발자 눈높이 확인, _runplan '사용자 개입 포인트')
+  - GitHub 배포 (사용자 보류 중 — 레포명 단수/복수, 공개범위 결정 필요)
