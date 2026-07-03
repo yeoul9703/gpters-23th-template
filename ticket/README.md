@@ -27,6 +27,9 @@
 **만들/고칠 skill**
 - (없음 — 전부 done)
 
+**막힌 점 / 실험**
+- `015-clip-blank-body-diagnosis.md` — 클립 빈 본문 원인 진단 + 안정화 (Fable/Opus A/B 실험 티켓)
+
 
 
 **참고**
