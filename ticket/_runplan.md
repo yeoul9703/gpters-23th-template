@@ -7,11 +7,12 @@ task.json 하나 = 세션(에이전트) 하나가 끝낼 분량. 이 문서가 �
 
 | 순서 | task | 내용 | 의존 | 상태 |
 |---|---|---|---|---|
-| 0 | `009-clip-gpters.task.json` | 지피터스 클리핑 → `_style-reference.md` | — | ⏳ 대기 (Fable 5 세션용) |
+| 0 | `009-clip-gpters.task.json` | 지피터스 클리핑 → `_style-reference.md` | — | ↗ 014 로 확장·병합 (C3 완결로 Fable 불필요) |
 | 1 | `010-onboarding.task.json` | welcome 신규 + setup 삭제 + missions 점검 | — | ✅ 완료 (2026-07-03, acceptance 4/4) |
 | 2 | `011-meta-tools.task.json` | skill-creator 신규 + thinking-partner 개선 | — | ✅ 완료 (2026-07-03, acceptance 4/4) |
 | 3 | `012-researchers.task.json` | 서브에이전트 2개 (.claude/agents/) | — | ✅ 완료 (2026-07-03, acceptance 4/4 · C3 완결 확인) |
-| 4 | `013-case-writer.task.json` | case-writer 개명+재작성 | **009 산출물 필수** | 🚫 blocked |
+| 4 | `013-case-writer.task.json` | case-writer 개명+재작성 | **_style-reference.md 필수** (009→014) | 🚫 blocked |
+| 5 | `014-clip-gpters-50.task.json` | 사례 게시글 50개 클리핑 + 문체 레퍼런스 | — | 🔄 실행 중 (2026-07-03) |
 
 010·011·012 는 서로 독립(파일 겹침 없음) → **병렬 가능**.
 013 만 009 뒤. 009 는 runner 가 Fable 로 지정돼 있으니 별도 세션에서.

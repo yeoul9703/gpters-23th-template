@@ -1,0 +1,48 @@
+{
+  "id": "014",
+  "tickets": ["ticket/014-clip-gpters-50.md"],
+  "supersedes": "009 (산출물 흡수: 클립≥4 → 50, _style-reference.md 포함)",
+  "title": "지피터스 사례 게시글 50개 클리핑 + 문체 레퍼런스",
+  "runner": "claude-opus (오케스트레이터) + 병렬 서브에이전트",
+  "depends_on": [],
+  "goal": "공개 사례 게시글 50개를 ticket/clips/ 에 클립하고, 전체를 종합한 _style-reference.md 를 만든다.",
+  "why": "case-writer(013) 의 문체 근거 + 참가자가 뒤져볼 실사례 풀. 009 의 목적을 규모만 키워 달성.",
+
+  "decisions_already_made": [
+    "C3 완결: 태그 목록·개별 글 본문 모두 WebFetch 공개 (로그인 벽은 회원 프로필뿐). 브라우저 자동화 불필요.",
+    "009 의 constraints·클립 형식·must_include 그대로 승계."
+  ],
+
+  "constraints": [
+    "본문 텍스트만, 이미지/첨부 다운로드 금지. 글 하나당 한 번만 열기.",
+    "클립 1개 = 화면 한 눈 분량. 전체 본문 복붙 금지, 요약만.",
+    "클립 파일명: clips/NNN-짧은-슬러그.md (NNN=001부터 연번). 같은 글 중복 클립 금지 (URL 기준 dedupe).",
+    "각 클립: _template.md 필드(title/source/category/clipped/tags) + '## 글쓰기에서 훔칠 점' 1~3줄.",
+    "category: 목록 출처에 따라 best | ax. 판단 불가면 best.",
+    "지어낸 요약 금지 — 실제로 연 글만 클립. 못 연 글은 클립 안 만들고 실패 목록에 기록."
+  ],
+
+  "orchestration": {
+    "phase1_scout": "공개 목록 페이지(알려진 태그 페이지 + gpters.org 공개 게시판 탐색)에서 고유 게시글 URL 55개 이상 열거 (여유분 포함). 제목·URL·작성자·출처태그.",
+    "phase2_workers": "5개 병렬 에이전트 × 10개씩 배정. 각자 WebFetch → 클립 파일 작성. 파일명 연번 대역을 에이전트별로 사전 할당해 충돌 방지 (001-010, 011-020, …).",
+    "phase3_synthesis": "전체 클립을 훑어 _style-reference.md 작성(must_include: 공통 도입 방식 / 문장·호흡 특징 / 피하는 것 / 4흐름 대응 예시). clips/README 인덱스 갱신.",
+    "commit": "오케스트레이터가 검수 후 일괄 커밋 (task 014 명시)."
+  },
+
+  "outputs": [
+    "ticket/clips/NNN-*.md × 50 (±: 최소 45, 실패분은 기록)",
+    "ticket/clips/_style-reference.md",
+    "ticket/clips/README.md 인덱스 갱신",
+    "009·014 티켓 done"
+  ],
+
+  "acceptance": [
+    "클립 45개 이상, 각각 source URL + '훔칠 점' 섹션 존재.",
+    "URL 중복 0건.",
+    "_style-reference.md 가 must_include 4항목을 담고 003 의 4흐름과 연결됨.",
+    "실패한 글이 있으면 014 티켓 '막힌 점'에 URL 과 사유가 남아 있음."
+  ],
+
+  "on_block": "목록 페이지에서 50개를 못 채우면(공개 글 부족) 있는 만큼만 클립하고 실제 수를 014 에 기록. 절반 이상 본문이 안 열리면 중단 후 보고.",
+  "done_when": "acceptance 만족 → 009·014 status done, _runplan 갱신, 커밋."
+}
