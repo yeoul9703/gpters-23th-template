@@ -17,7 +17,8 @@ created: 2026-07-03
 
 ## 할 것 (체크리스트)
 
-- [ ] 지피터스 게시판 접근 방식 확인 (URL·로그인 필요 여부)
+- [x] ~~지피터스 게시판 접근 방식 확인~~ (009 사전조사: 태그 목록 공개=WebFetch OK, 회원 프로필 로그인 벽 → _discuss C3)
+- [ ] [[009-clip-gpters-writing-samples]] 첫 수동 실행 결과 보고 스펙 다듬기 (개별 글 접근 여부 포함)
 - [ ] 입력(관심 주제) → 출력(게시글 3~5개: 링크·한줄 요약·왜 쓸모) 스펙
 - [ ] 읽기 전용 도구만 부여
 - [ ] 출력 형식을 clips/_template.md 에 맞춰 바로 클립 가능하게
@@ -25,5 +26,7 @@ created: 2026-07-03
 
 ## 막힌 점 / 메모
 
-- 게시판이 로그인 벽 뒤면 브라우저 자동화(claude-in-chrome) 필요할 수 있음
+- 진입점 URL: `https://www.gpters.org/ai-study-post?tag_id=Q1d120GLVF32yKbIgqFxE` (공개, 009 task.json 에 상세)
+- 개별 글 본문이 막히면 claude-in-chrome 폴백 (사용자 Chrome 로그인 상태)
+- 이 에이전트가 자동화할 일의 **첫 수동 실행 = [[009-clip-gpters-writing-samples]]**. 009 결과가 이 티켓의 스펙 근거.
 - 관련: [[003-g23-case-writer]] 사례글 재료로 이어짐, ticket/clips 로 저장

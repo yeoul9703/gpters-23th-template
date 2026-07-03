@@ -76,9 +76,11 @@ week-1~4.md 존재. missions 는 한 주차만 읽음(P1 부합). 가벼운 점�
 ### ☐ C2. k-skill 접근 방식 (007)
 로컬 클론 vs 원격(GitHub) 조회. 경량 원칙상 원격 훑기 선호?
 
-### ☐ C3. 지피터스 게시판 접근 (008)
-"베스트 사례"·"ax" 게시판이 로그인 벽 뒤인가? → 그렇다면 claude-in-chrome 필요.
-- 먼저: URL 과 로그인 여부 확인.
+### 🔄 C3. 지피터스 게시판 접근 (008) — 절반 확인됨 (009 사전조사, 2026-07-03)
+- **태그 목록 페이지 = 공개.** WebFetch 로 제목·작성자·링크 열거 가능 확인.
+  (`https://www.gpters.org/ai-study-post?tag_id=...`)
+- **회원 프로필 = 로그인 벽.** (`gpters.org/member/...`) → claude-in-chrome 폴백 (사용자 Chrome 로그인 상태).
+- 남은 것: **개별 글 본문**이 WebFetch 로 열리는지 → [[009-clip-gpters-writing-samples]] 실행 중 확인.
 
 ### ☐ C4. case-writer 이름/개선 범위 (003)
 `g23-case-post-writer` 유지 vs `g23-case-writer` 개명. (P2 와 연동)
@@ -88,3 +90,4 @@ week-1~4.md 존재. missions 는 한 주차만 읽음(P1 부합). 가벼운 점�
 ## 확정 로그
 
 - 2026-07-03 P1 스킬 경량 원칙 확정 (Pro 전제)
+- 2026-07-03 C3 절반 확인 — 태그 목록 공개 / 회원 프로필 로그인 벽 (009 사전조사)
