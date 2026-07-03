@@ -24,7 +24,7 @@
 
 **만들/고칠 skill**
 - `002-g23-thinking-partner.md` — 모호한 의도 명확화 (개선)
-- `003-g23-case-writer.md` — k-윤문 톤 사례글, AI slop 제거 (개선)
+- `003-g23-case-writer.md` — 담백한 사례글, AI 티 없이 · 경량 (개선)
 - `004-g23-welcome.md` — 첫날 셋업+온보딩, g23-setup 흡수 (신규)
 - `005-skill-creator.md` — Anthropic 공식 참고 skill 제작 도우미 (신규)
 - `006-g23-missions.md` — 1~4주차 미션 제공, welcome 과 분리 (점검)
