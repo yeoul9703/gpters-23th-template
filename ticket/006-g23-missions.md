@@ -2,7 +2,7 @@
 id: 006
 title: g23-missions — 1~4주차 미션 제공 (welcome 과 분리 유지)
 type: skill
-status: todo
+status: done
 created: 2026-07-03
 ---
 
@@ -26,9 +26,9 @@ created: 2026-07-03
 
 - [x] ~~week-1~4.md 존재 확인~~ (4개 다 있음)
 - [x] ~~"몇 주차" 판단 방식~~ (물어보기, 이미 구현)
-- [ ] SKILL.md 가 4주치 표/결과물 최신인지 가볍게 훑기
-- [ ] welcome(004)에서 넘어오는 핸드오프 문구 맞추기
-- [ ] setup 삭제(A1) 후 SKILL.md 내 setup 언급 없는지 확인 (현재 없음)
+- [x] SKILL.md 가 4주치 표/결과물 최신인지 가볍게 훑기 (week-1~4.md 제목·손에 남는 것과 일치, 수정 불요)
+- [x] welcome(004)에서 넘어오는 핸드오프 문구 맞추기 (welcome ⑥ "이번 주 미션 알려줘" = missions 트리거 "이번 주 미션", 진행 1단계 "처음이면 1주차부터"와 정합)
+- [x] setup 삭제(A1) 후 SKILL.md 내 setup 언급 없는지 확인 (없음, rg 확인)
 
 ## 막힌 점 / 메모
 

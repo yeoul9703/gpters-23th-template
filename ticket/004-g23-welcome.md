@@ -2,7 +2,7 @@
 id: 004
 title: g23-welcome — 첫날 셋업 + 미니 실습 + 온보딩 (setup 흡수)
 type: skill
-status: todo
+status: done
 created: 2026-07-03
 ---
 
@@ -31,11 +31,11 @@ welcome 흐름 — setup §1~4 흡수 + 미니 실습 + 핸드오프:
 
 ## 할 것 (체크리스트)
 
-- [ ] `.claude/skills/g23-welcome/SKILL.md` 작성 (위 6단계, setup §1~4 재사용)
-- [ ] 미니 실습(5단계) 구체화: "5줄 skill 하나 같이 만들기" 같은 최소 작업 1개 정하기
-- [ ] setup 삭제: `.claude/skills/g23-setup/` 제거
-- [ ] 참조 3곳 welcome 으로 갱신: 루트 README.md(L19,L51), missions/week-1.md(L11)
-- [ ] "처음 온 척" 한 번 돌려보기 (셋업→미니실습→missions 안내까지)
+- [x] `.claude/skills/g23-welcome/SKILL.md` 작성 (위 6단계, setup §1~4 재사용)
+- [x] 미니 실습(5단계) 구체화: 반복 작업 1개(기본안: 아침 루틴)로 5줄 SKILL.md 만들고 트리거로 즉시 실행 → skill-creator 부재 시 포인터로 degrade
+- [x] setup 삭제: `.claude/skills/g23-setup/` 제거 (`git rm`)
+- [x] 참조 3곳 welcome 으로 갱신: 루트 README.md(L19,L51), missions/week-1.md(L11) — `rg 'g23-setup'` 잔존 참조는 ticket/·docs/ 기록물뿐
+- [x] "처음 온 척" 한 번 돌려보기 (①→⑥ 시나리오 자가 점검: 트리거→셋업→미니실습→missions 핸드오프 연결 확인)
 
 ## 막힌 점 / 메모
 

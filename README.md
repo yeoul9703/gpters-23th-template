@@ -16,7 +16,7 @@
 ### 2. Claude Code에 아래 문장을 그대로 붙여넣습니다
 
 ```text
-이 폴더의 README.md와 CLAUDE.md를 읽고, g23-setup skill을 실행해서 나에게 맞는 초기 설정을 도와줘.
+이 폴더의 README.md와 CLAUDE.md를 읽고, g23-welcome skill을 실행해서 스터디 시작을 도와줘.
 ```
 
 Claude가 여러분의 OS, Claude Code 사용 경험, 업무를 몇 가지 물어보고 스터디를 시작할 준비를 함께 잡아줍니다.
@@ -48,7 +48,7 @@ Claude Code에게 자연어로 말하면 아래 skill들이 알아서 켜집니�
 
 | Skill | 언제 쓰나 |
 |---|---|
-| `g23-setup` | 처음 시작할 때 초기 설정을 잡을 때 |
+| `g23-welcome` | 처음 시작할 때 — 셋업부터 첫 skill 실습까지 온보딩 |
 | `g23-missions` | 이번 주 무엇을 해야 하는지 확인할 때 |
 | `g23-thinking-partner` | 내 반복 업무에서 skill 후보를 고를 때 |
 | `g23-k-skills-search` | 참고할 k-skill 사례를 찾을 때 |
