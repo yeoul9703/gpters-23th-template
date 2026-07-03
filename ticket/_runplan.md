@@ -11,7 +11,7 @@ task.json 하나 = 세션(에이전트) 하나가 끝낼 분량. 이 문서가 �
 | 1 | `010-onboarding.task.json` | welcome 신규 + setup 삭제 + missions 점검 | — | ✅ 완료 (2026-07-03, acceptance 4/4) |
 | 2 | `011-meta-tools.task.json` | skill-creator 신규 + thinking-partner 개선 | — | ✅ 완료 (2026-07-03, acceptance 4/4) |
 | 3 | `012-researchers.task.json` | 서브에이전트 2개 (.claude/agents/) | — | ✅ 완료 (2026-07-03, acceptance 4/4 · C3 완결 확인) |
-| 4 | `013-case-writer.task.json` | case-writer 개명+재작성 | _style-reference.md ✓ | ⏳ 실행 가능 (블록 해제) |
+| 4 | `013-case-writer.task.json` | case-writer 개명+재작성 | _style-reference.md ✓ | ✅ 완료 (2026-07-03, acceptance 4/4 · C1 목록 9개 확정) |
 | 5 | `014-clip-gpters-50.task.json` | 사례 게시글 50개 클리핑 + 문체 레퍼런스 | — | ✅ 완료 (2026-07-03, 50/50 · 실패 0 · acceptance 4/4) |
 
 010·011·012 는 서로 독립(파일 겹침 없음) → **병렬 가능**.

@@ -25,7 +25,7 @@
 <!-- 새 티켓을 만들면 여기 한 줄씩 추가. done 은 지우거나 아래로 내린다. -->
 
 **만들/고칠 skill**
-- `003-g23-case-writer.md` — 담백한 사례글, AI 티 없이 · 경량 (개선) — task 013, 009 대기
+- (없음 — 전부 done)
 
 
 
@@ -55,3 +55,4 @@ gpters-case-researcher ─┴─▶ ticket/clips + g23-case-writer  (조사→�
 - `008-agent-gpters-case-researcher.md` — 동상, C3 완결 확인 (task 012, 2026-07-03)
 - `009-clip-gpters-writing-samples.md` — 014 에 병합·초과 달성 (2026-07-03)
 - `014-clip-gpters-50.md` — 지피터스 사례 50개 클립 + `clips/_style-reference.md` (task 014, 2026-07-03)
+- `003-g23-case-writer.md` — g23-case-writer 개명 + 경량 재작성, C1 상투구 9개 확정 (task 013, 2026-07-03)
