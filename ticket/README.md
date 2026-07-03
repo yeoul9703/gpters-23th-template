@@ -35,6 +35,9 @@
 - `007-agent-k-skill-researcher.md` — k-skill 레포 조사 (신규)
 - `008-agent-gpters-case-researcher.md` — 지피터스 사례 조사 (신규)
 
+**실행 태스크 (Fable 5)**
+- `009-clip-gpters-writing-samples.md` (+`009-clip-gpters.task.json`) — 지피터스 사례글 클립 → case-writer 문체 레퍼런스
+
 **참고**
 - `001-example.md` — 견본 티켓 (감 잡으면 삭제)
 

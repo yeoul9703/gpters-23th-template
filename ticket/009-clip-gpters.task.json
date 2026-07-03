@@ -1,0 +1,107 @@
+{
+  "id": "009",
+  "ticket": "ticket/009-clip-gpters-writing-samples.md",
+  "title": "지피터스 사례글 클리핑 + case-writer 문체 레퍼런스",
+  "runner": "claude-fable-5",
+  "goal": "지피터스 스터디 사례글 4개 이상을 ticket/clips/ 에 클립하고, 그 글들의 '사람이 쓴 티 나는' 문체 패턴을 종합한 ticket/clips/_style-reference.md 를 만들어 g23-case-writer(003) 의 참고 재료로 넘긴다.",
+  "why": "003(case-writer) 를 잘 만들려면 담백한 실제 글 예시가 필요하다. 0부터 톤을 상상하지 말고 베스트 사례를 few-shot 재료로 삼는다.",
+
+  "constraints": [
+    "참가자 대부분 Claude Pro 요금제 → 토큰 아끼기.",
+    "이미지/첨부 다운로드 금지. 본문 텍스트만.",
+    "각 글은 한 번만 열어 요약. 같은 페이지 반복 로드 금지.",
+    "클립 1개는 화면 한 눈 분량(짧게). 전체 본문 복붙 금지, 요약만.",
+    "사용자 로컬 설정(.claude/settings.json, hooks) 수정 금지."
+  ],
+
+  "sources": {
+    "tag_list": {
+      "url": "https://www.gpters.org/ai-study-post?tag_id=Q1d120GLVF32yKbIgqFxE",
+      "access": "public",
+      "how": "WebFetch 로 글 제목과 개별 글 링크(slug)를 열거. 진입점.",
+      "note": "2026-07-03 확인: 로그인 없이 제목/작성자 보임."
+    },
+    "member_profile": {
+      "url": "http://gpters.org/member/WZlPiwwnpW",
+      "access": "login_wall",
+      "how": "개별 글 본문이 WebFetch 로 막히면 claude-in-chrome 브라우저 자동화로 폴백. 사용자가 Chrome 에 로그인돼 있음.",
+      "note": "추가 문체 샘플이 필요할 때만 사용. 필수는 아님."
+    }
+  },
+
+  "candidate_posts": [
+    { "title": "정부과제 최종 보고서 작성을 루프 엔지니어링으로 해보기", "author": "김태현" },
+    { "title": "자사 데이터로 ICP를 거꾸로 설계하고, 아웃바운드 타깃을 하루 만에 뽑은 이야기", "author": "광밤" },
+    { "title": "가상 페르소나 5명으로 설치 UX를 하루 만에 갈아엎은 개선 루프", "author": "윤누리" },
+    { "title": "회식 날짜 잡기 너무 귀찮아서 비개발자가 Claude Code로 4일 만에 앱을 만든 이야기", "author": "말" },
+    { "title": "나는 검토만 했는데, AI가 재무 자동화를 끝냈다", "author": "광밤" }
+  ],
+
+  "steps": [
+    {
+      "n": 1,
+      "do": "tag_list URL 을 WebFetch 로 열어 각 후보 글의 실제 링크(slug)를 확보한다.",
+      "tool": "WebFetch",
+      "out": "글 제목 → URL 매핑"
+    },
+    {
+      "n": 2,
+      "do": "후보 글 중 4개 이상을 하나씩 열어 본문을 요약한다. WebFetch 로 막히면 claude-in-chrome 으로 폴백.",
+      "tool": "WebFetch | mcp__claude-in-chrome__*",
+      "out": "글별 3줄 요약 + 문체 관찰"
+    },
+    {
+      "n": 3,
+      "do": "글 하나당 클립 파일 하나 생성. ticket/clips/_template.md 형식을 따르되, 맨 아래 '## 글쓰기에서 훔칠 점' 섹션을 추가한다.",
+      "path": "ticket/clips/{짧은-슬러그}.md",
+      "template": "ticket/clips/_template.md",
+      "fields": {
+        "title": "글 제목",
+        "source": "글 URL",
+        "category": "best",
+        "clipped": "실행 날짜",
+        "tags": "예: [사례글, 문체]"
+      },
+      "extra_section": "## 글쓰기에서 훔칠 점  (도입 방식, 문장 길이, 담백함, 구체 수치/장면 등 1~3줄)"
+    },
+    {
+      "n": 4,
+      "do": "클립들을 종합해 문체 레퍼런스 문서를 쓴다. '이 글들이 왜 AI 티가 안 나고 잘 읽히는가'를 규칙처럼 정리.",
+      "path": "ticket/clips/_style-reference.md",
+      "must_include": [
+        "공통 도입 방식 (예: 상황·불편함부터 훅으로)",
+        "문장/호흡 특징 (짧은 문장, 구체 수치, 장면 묘사)",
+        "피하는 것 (과장 형용사, 접속사 남발, 억지 정리) — 003 의 상투구 목록과 연결",
+        "case-writer 4흐름(의도/시행착오/결과/다음)에 실제로 어떻게 대응됐는지 예시 1~2"
+      ]
+    },
+    {
+      "n": 5,
+      "do": "003 티켓에 문체 레퍼런스 포인터 한 줄 추가.",
+      "path": "ticket/003-g23-case-writer.md",
+      "edit": "'## 참고' 섹션에 '- 문체 레퍼런스(실제 사례): ticket/clips/_style-reference.md' 추가"
+    },
+    {
+      "n": 6,
+      "do": "로그인 벽 등으로 못 가져온 소스가 있으면 009 티켓 '막힌 점' 에 기록.",
+      "path": "ticket/009-clip-gpters-writing-samples.md"
+    }
+  ],
+
+  "outputs": [
+    "ticket/clips/{슬러그}.md  × 4개 이상",
+    "ticket/clips/_style-reference.md",
+    "ticket/003-g23-case-writer.md 에 포인터 1줄"
+  ],
+
+  "acceptance": [
+    "실제 지피터스 글에서 만든 클립이 4개 이상, 각 클립에 source URL 과 '글쓰기에서 훔칠 점' 이 있다.",
+    "_style-reference.md 가 must_include 4항목을 담고, 003 의 4흐름과 연결돼 있다.",
+    "003 티켓에서 _style-reference.md 로 가는 포인터가 보인다.",
+    "지어낸 요약 없음 — 각 클립은 실제로 연 글에 기반한다."
+  ],
+
+  "on_block": "소스 3곳 이상에서 막히거나 태그 페이지가 안 열리면, 클립을 억지로 만들지 말고 무엇이 막혔는지 009 '막힌 점' 에 적고 멈춘 뒤 사용자에게 보고.",
+
+  "done_when": "outputs 3종이 다 존재하고 acceptance 4개를 만족하면 009 status 를 done 으로 바꾼다."
+}
