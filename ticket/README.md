@@ -22,7 +22,29 @@
 
 <!-- 새 티켓을 만들면 여기 한 줄씩 추가. done 은 지우거나 아래로 내린다. -->
 
-- [예시] `001-example.md` — 티켓이 어떻게 생겼는지 보여주는 견본 (지워도 됨)
+**만들/고칠 skill**
+- `002-g23-thinking-partner.md` — 모호한 의도 명확화 (개선)
+- `003-g23-case-writer.md` — k-윤문 톤 사례글, AI slop 제거 (개선)
+- `004-g23-welcome.md` — 첫날 셋업+온보딩, g23-setup 흡수 (신규)
+- `005-skill-creator.md` — Anthropic 공식 참고 skill 제작 도우미 (신규)
+- `006-g23-missions.md` — 1~4주차 미션 제공, welcome 과 분리 (점검)
+
+**서브에이전트**
+- `007-agent-k-skill-researcher.md` — k-skill 레포 조사 (신규)
+- `008-agent-gpters-case-researcher.md` — 지피터스 사례 조사 (신규)
+
+**참고**
+- `001-example.md` — 견본 티켓 (감 잡으면 삭제)
+
+### 관계 지도
+
+```
+g23-welcome ──안내──▶ g23-missions        (온보딩→매주 미션)
+   └ g23-setup 흡수
+g23-thinking-partner ──▶ skill-creator     (범위 좁히기→실제 생성)
+k-skill-researcher ─┐
+gpters-case-researcher ─┴─▶ ticket/clips + g23-case-writer  (조사→클립→사례글)
+```
 
 ## done
 
