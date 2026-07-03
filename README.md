@@ -52,7 +52,7 @@ Claude Code에게 자연어로 말하면 아래 skill들이 알아서 켜집니�
 | `g23-missions` | 이번 주 무엇을 해야 하는지 확인할 때 |
 | `g23-thinking-partner` | 내 반복 업무에서 skill 후보를 고를 때 |
 | `g23-k-skills-search` | 참고할 k-skill 사례를 찾을 때 |
-| `g23-case-post-writer` | 사용 기록으로 사례글을 쓸 때 |
+| `g23-case-writer` | 사용 기록으로 사례글을 쓸 때 |
 
 ## 4주 후 손에 남는 것
 

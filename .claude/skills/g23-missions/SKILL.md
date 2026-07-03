@@ -33,4 +33,4 @@ description: 지피터스 23기 k-skill 스터디의 주차별 미션을 안내�
 
 - skill 후보를 못 고르겠다면 → `g23-thinking-partner`
 - 참고 사례를 찾고 싶다면 → `g23-k-skills-search`
-- 사용 기록·사례글을 쓸 때 → `g23-case-post-writer`, 양식은 `examples/`
+- 사용 기록·사례글을 쓸 때 → `g23-case-writer`, 양식은 `examples/`

@@ -9,7 +9,7 @@
 
 ## 이번 주 순서
 1. skill 3개와 각 사용 기록이 모였는지 확인한다. 빠진 게 있으면 채운다.
-2. `g23-case-post-writer`로 사례글을 쓴다. 양식: `examples/case-post-notes-template.md`.
+2. `g23-case-writer`로 사례글을 쓴다. 양식: `examples/case-post-notes-template.md`.
 3. 계속 쓸 것 / 접을 것을 정하고, 다음 달 고도화 목록을 만든다.
 
 ## 손에 남는 것 (최종 결과물)
