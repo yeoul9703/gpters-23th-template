@@ -27,8 +27,6 @@
 **만들/고칠 skill**
 - (없음 — 전부 done)
 
-**막힌 점 / 실험**
-- `015-clip-blank-body-diagnosis.md` — 클립 빈 본문 원인 진단 + 안정화 (Fable/Opus A/B 실험 티켓)
 
 
 
@@ -59,3 +57,4 @@ gpters-case-researcher ─┴─▶ ticket/clips + g23-case-writer  (조사→�
 - `009-clip-gpters-writing-samples.md` — 014 에 병합·초과 달성 (2026-07-03)
 - `014-clip-gpters-50.md` — 지피터스 사례 50개 클립 + `clips/_style-reference.md` (task 014, 2026-07-03)
 - `003-g23-case-writer.md` — g23-case-writer 개명 + 경량 재작성, C1 상투구 9개 확정 (task 013, 2026-07-03)
+- `015-clip-blank-body-diagnosis.md` — 빈 본문 원인 = Jina 동시요청 502 + 실패 오표기·재시도 부재. researcher 규칙 수정 (Fable 브랜치, 2026-07-03)
