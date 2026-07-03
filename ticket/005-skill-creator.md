@@ -2,7 +2,7 @@
 id: 005
 title: skill-creator — 3문 인터뷰로 SKILL.md 한 장 뽑아주기 (공식 스펙 경량화)
 type: skill
-status: todo
+status: done
 created: 2026-07-03
 ---
 
@@ -43,13 +43,20 @@ created: 2026-07-03
 
 ## 할 것 (체크리스트)
 
-- [ ] `.claude/skills/skill-creator/SKILL.md` 작성 (위 5단계 흐름)
-- [ ] description 을 "핵심 쓰임 맨 앞 + 넉넉한 트리거" 규칙대로 작성
-- [ ] g23-thinking-partner → skill-creator 핸드오프 문구 맞추기 (양쪽)
-- [ ] 견본 skill 1개 실제로 만들어보며 검증 (비개발자 눈높이 확인)
-- [ ] 공식 플러그인 한 줄 포인터 넣기 (`skill-creator@claude-plugins-official`)
+- [x] `.claude/skills/skill-creator/SKILL.md` 작성 (위 5단계 흐름)
+- [x] description 을 "핵심 쓰임 맨 앞 + 넉넉한 트리거" 규칙대로 작성
+- [x] g23-thinking-partner → skill-creator 핸드오프 문구 맞추기 (양쪽)
+- [x] 견본 skill 1개 실제로 만들어보며 검증 (비개발자 눈높이 확인)
+- [x] 공식 플러그인 한 줄 포인터 넣기 (`skill-creator@claude-plugins-official`)
 
 ## 막힌 점 / 메모
 
 - 근거: Claude Code Skills 공식 docs (frontmatter cap·트리거·배치), anthropics/skills 레포
 - 관련: [[002-g23-thinking-partner]] 에서 넘어옴, [[004-g23-welcome]] 미니 실습이 이 스킬을 부름
+- **견본 검증 기록 (task 011 step 4, 2026-07-03)** — 페르소나 "주간보고 정리하는 실무자"로 5단계 흐름을 드라이런. 생성물은 `.claude/skills/` 에 남기지 않고 기록만 남김:
+  - ① 범위 확인: "매주 금요일, 이번 주 한 일 메모를 주면 팀장 보고용 주간보고 초안이 나온다" — 한 문장으로 나옴 → 통과 (흐릿했다면 thinking-partner 행).
+  - ② 3문 인터뷰: 입력→출력 = 흩어진 한 일 메모 → '한 일/진행 중/다음 주 계획/이슈' 4섹션 초안 / 트리거 = "주간보고 쓰자", "주간보고 정리", "이번 주 보고 초안", "금요일 보고", "위클리 정리" / 특수 도구 = 없음(메모를 대화에 붙여넣기).
+  - ③ 초안: `weekly-report-draft/SKILL.md` 한 장. frontmatter: `name: weekly-report-draft`, `description: 흩어진 이번 주 업무 메모를 팀장 보고용 주간보고 초안(한 일/진행 중/다음 주 계획/이슈)으로 정리한다. "주간보고 쓰자", "주간보고 정리", "이번 주 보고 초안", "금요일 보고", "위클리 정리", "이번 주 정리"라고 말하면 켠다.` 본문 ~25줄(입력 형식, 4섹션 출력 틀, 빠진 정보는 [확인 필요]로 표시).
+  - ④ 트리거 자가확인: "주간보고 쓰자"·"금요일 보고 초안"·"위클리 정리해줘" → 켜짐 예상. "이번 주 정리 좀"은 애매 → description 에 "이번 주 정리" 추가 (넉넉한 트리거 규칙이 실제로 작동함을 확인).
+  - ⑤ 한 주 써보고 고치기: skill-log-template 기록 안내까지 흐름 자연스러움.
+  - 판단: 견본은 examples/ 에 남기지 않음 — 스터디 취지상 참가자가 자기 업무로 직접 만들어야 하고, 완성 견본이 있으면 베끼게 됨. (오케스트레이터 지시와도 일치)
