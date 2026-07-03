@@ -25,15 +25,11 @@
 <!-- 새 티켓을 만들면 여기 한 줄씩 추가. done 은 지우거나 아래로 내린다. -->
 
 **만들/고칠 skill**
-- `002-g23-thinking-partner.md` — 흐릿한 아이디어 → skill 미니 스펙 (개선)
-- `003-g23-case-writer.md` — 담백한 사례글, AI 티 없이 · 경량 (개선)
-- `004-g23-welcome.md` — 첫날 셋업 + 미니 실습 + 온보딩, setup 흡수 (신규)
-- `005-skill-creator.md` — 3문 인터뷰로 SKILL.md 한 장, 공식 스펙 경량화 (신규)
-- `006-g23-missions.md` — 1~4주차 미션 제공, welcome 과 분리 (점검)
+- `003-g23-case-writer.md` — 담백한 사례글, AI 티 없이 · 경량 (개선) — task 013, 009 대기
 
 **서브에이전트**
-- `007-agent-k-skill-researcher.md` — k-skill 레포 조사 (신규)
-- `008-agent-gpters-case-researcher.md` — 지피터스 사례 조사 (신규)
+- `007-agent-k-skill-researcher.md` — k-skill 레포 조사 (신규) — task 012 실행 중
+- `008-agent-gpters-case-researcher.md` — 지피터스 사례 조사 (신규) — task 012 실행 중
 
 **실행 태스크 (Fable 5)**
 - `009-clip-gpters-writing-samples.md` (+`009-clip-gpters.task.json`) — 지피터스 사례글 클립 → case-writer 문체 레퍼런스
@@ -55,3 +51,8 @@ gpters-case-researcher ─┴─▶ ticket/clips + g23-case-writer  (조사→�
 ## done
 
 <!-- 끝난 티켓을 여기로 -->
+
+- `004-g23-welcome.md` — welcome 신규(6단계) + setup 삭제 (task 010, 2026-07-03)
+- `006-g23-missions.md` — 4주치 점검·핸드오프 정합 (task 010, 2026-07-03)
+- `005-skill-creator.md` — 3문 인터뷰→SKILL.md 한 장 (task 011, 2026-07-03)
+- `002-g23-thinking-partner.md` — 미니 스펙 + skill-creator 핸드오프 (task 011, 2026-07-03)
