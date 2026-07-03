@@ -1,0 +1,48 @@
+{
+  "id": "012",
+  "tickets": ["ticket/007-agent-k-skill-researcher.md", "ticket/008-agent-gpters-case-researcher.md"],
+  "title": "덩어리 D — 서브에이전트: k-skill-researcher + gpters-case-researcher",
+  "runner": "claude-opus",
+  "depends_on": [],
+  "goal": ".claude/agents/ 에 조사 전담 서브에이전트 2개를 만든다. 넓게 훑고 후보만 물어오는 얇은 읽기 전용 에이전트.",
+  "why": "g23-k-skills-search(스킬)와 클리핑 흐름의 뒷단 조사를 분리해, 메인 대화 토큰을 아낀다(P1).",
+
+  "decisions_already_made": [
+    "C2: k-skill 레포는 **원격 조회** (GitHub API·WebFetch 로 필요한 파일만). 로컬 클론 안 함. 2026-07-03 확정.",
+    "C3(절반): 지피터스 태그 목록 페이지는 공개(WebFetch 가능), 회원 프로필은 로그인 벽 → claude-in-chrome 폴백. 개별 글 본문 접근성은 009 실행에서 확인 예정.",
+    "P2: 에이전트 이름은 접두 없이 역할명 — `k-skill-researcher`, `gpters-case-researcher`."
+  ],
+
+  "constraints": [
+    "읽기 전용 도구만 (WebFetch/WebSearch/Read/Grep/Glob 수준). 파일 쓰기·Bash 불필요.",
+    "출력은 '후보 3~5개: 링크·한줄 요약·왜 맞는지' — 본문 통째 반환 금지 (P1).",
+    "gpters-case-researcher 출력은 ticket/clips/_template.md 필드(title/source/category/tags)에 바로 옮길 수 있는 형태로.",
+    "에이전트 정의는 .claude/agents/{name}.md frontmatter 형식 — 공식 스펙(name, description, tools)을 먼저 확인하고 작성."
+  ],
+
+  "steps": [
+    { "n": 1, "do": "Claude Code 서브에이전트 정의 스펙 확인 (.claude/agents/*.md frontmatter 필드·tools 제한 문법). 공식 docs 기준." },
+    { "n": 2, "do": ".claude/agents/k-skill-researcher.md 작성: 입력=업무 키워드, 동작=k-skill 레포(NomaDamas/k-skill)를 원격으로 훑기(README·카테고리 인덱스 우선, 필요한 SKILL.md 만 개별 fetch), 출력=후보 3~5개(레포 내 경로·요약·왜 맞는지)." },
+    { "n": 3, "do": ".claude/agents/gpters-case-researcher.md 작성: 입력=관심 주제, 동작=공개 태그 목록 페이지에서 글 열거 후 후보 선별(본문 열람은 WebFetch 시도, 막히면 '로그인 필요' 표시만), 출력=게시글 3~5개(제목·URL·한줄 요약·클립 가치)." },
+    { "n": 4, "do": "g23-k-skills-search SKILL.md 에 k-skill-researcher 를 부르는 연결 한 줄 추가 (스킬이 넓은 탐색을 에이전트에 위임)." },
+    { "n": 5, "do": "각 에이전트를 실제 입력 1개로 시험 실행 (예: '회의록 정리' / '자동화 후기'). 출력 형태가 스펙과 맞는지 확인." },
+    { "n": 6, "do": "007·008 티켓 체크리스트 갱신, status: done. C3 나머지(개별 글 본문 접근성)를 시험에서 확인했으면 _discuss.md C3 를 ✅ 로." }
+  ],
+
+  "outputs": [
+    ".claude/agents/k-skill-researcher.md",
+    ".claude/agents/gpters-case-researcher.md",
+    "g23-k-skills-search 연결 1줄",
+    "007·008 티켓 done"
+  ],
+
+  "acceptance": [
+    "두 에이전트 파일이 유효한 frontmatter(name/description/tools)를 갖는다 — 읽기 전용 도구만.",
+    "시험 실행 각 1회에서 '후보 3~5개 + 이유' 형태의 출력이 나왔다는 기록이 있다.",
+    "본문 전문을 그대로 돌려주지 않는다 (요약만).",
+    "g23-k-skills-search 에서 에이전트로의 위임 지점이 보인다."
+  ],
+
+  "on_block": "k-skill 레포 구조가 원격 훑기에 부적합하거나(파일 수백 개 나열 등) 지피터스가 전부 로그인 벽이면, 007/008 '막힌 점'에 기록하고 부분 완성 상태로 보고.",
+  "done_when": "outputs 4종 + acceptance 4개 만족 → 커밋 (메시지에 'task 012' 명시)."
+}

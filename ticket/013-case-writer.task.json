@@ -1,0 +1,49 @@
+{
+  "id": "013",
+  "tickets": ["ticket/003-g23-case-writer.md"],
+  "title": "덩어리 C — g23-case-writer: 개명 + 경량 재작성 (문체 레퍼런스 반영)",
+  "runner": "claude-opus",
+  "depends_on": ["009"],
+  "blocked_note": "009(Fable 클리핑)가 만든 ticket/clips/_style-reference.md 가 있어야 시작. 없으면 실행하지 말 것.",
+  "goal": "g23-case-post-writer 를 g23-case-writer 로 개명하고, 4흐름 + AI 상투구 회피 + 실제 문체 레퍼런스 기반의 경량 SKILL.md 로 재작성한다.",
+  "why": "사례글은 스터디 최종 결과물. 상상한 톤이 아니라 009 가 수집한 실제 베스트 사례의 문체를 few-shot 근거로 쓴다.",
+
+  "decisions_already_made": [
+    "C4/P2: `g23-case-post-writer` → `g23-case-writer` 개명 확정. 2026-07-03.",
+    "003 확정 설계: 4흐름(의도/시행착오/결과/다음) 느슨한 가이드, AI 상투구 10개 이내 SKILL.md 인라인, 코퍼스·채점·다에이전트 배제.",
+    "C1(잔여): 상투구 최종 목록은 이 태스크에서 확정 — 003 의 예시 목록 + _style-reference.md 의 '피하는 것' 을 합쳐 10개 이내로."
+  ],
+
+  "constraints": [
+    "P1 경량: SKILL.md 한 장, 별도 금지어 파일 없음, Python 검증 없음.",
+    "참가자 말투 살리기 — 스킬이 글을 대신 쓰는 게 아니라 참가자 메모를 엮는 것.",
+    "_style-reference.md 는 참고(요약 반영)하되 SKILL.md 에 통째로 인라인하지 않는다 — 포인터 + 핵심 규칙 몇 줄만."
+  ],
+
+  "steps": [
+    { "n": 1, "do": "선행 확인: ticket/clips/_style-reference.md 존재. 없으면 즉시 중단(on_block)." },
+    { "n": 2, "do": "기존 .claude/skills/g23-case-post-writer/SKILL.md 에서 재사용분 추림." },
+    { "n": 3, "do": "디렉터리 개명: g23-case-post-writer → g23-case-writer. rg 로 옛 이름 잔존 참조 찾아 전부 갱신 (루트 README, examples/ 템플릿, missions/ 등)." },
+    { "n": 4, "do": "SKILL.md 재작성: frontmatter(트리거: 사례글 써줘/후기/경험 정리) + 4흐름 가이드 + 상투구 목록(≤10, C1 확정) + 담백 원칙 + _style-reference.md 포인터." },
+    { "n": 5, "do": "examples/case-post-notes-template.md 의 양식에 가상 아닌 실제 클립 소재(009 산출물)로 초안 1개를 뽑아 자가 점검 — 상투구 0건인지." },
+    { "n": 6, "do": "003 티켓 갱신(status: done, C1 확정 목록 기록), _discuss.md 의 C1·C4 를 ✅ 로, 확정 로그 추가." }
+  ],
+
+  "outputs": [
+    ".claude/skills/g23-case-writer/SKILL.md (개명+재작성)",
+    "옛 이름 잔존 참조 0",
+    "상투구 최종 목록 (SKILL.md 인라인, ≤10)",
+    "시험 초안 1개 기록",
+    "003 티켓 done + _discuss C1/C4 ✅"
+  ],
+
+  "acceptance": [
+    "rg 'case-post-writer' 가 ticket/·docs/ (기록물) 외 0건.",
+    "SKILL.md 500줄 이하, 보조파일 없음, _style-reference.md 는 포인터로만.",
+    "상투구 목록이 10개 이내이고 _style-reference.md 의 '피하는 것'과 모순 없음.",
+    "시험 초안에서 상투구 목록 위반 0건."
+  ],
+
+  "on_block": "_style-reference.md 부재 시 실행 금지 — 009 먼저. 그 외 막히면 003 '막힌 점' 기록 후 보고.",
+  "done_when": "outputs 5종 + acceptance 4개 만족 → 커밋 (메시지에 'task 013' 명시)."
+}

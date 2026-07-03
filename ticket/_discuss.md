@@ -14,10 +14,11 @@
 - 서브에이전트도 "넓게 훑고 후보만 물어오기" 수준으로 얇게.
 > 출처: 003 티켓 정리 중 확정. CLAUDE.md "큰 파일 통째로 읽지 말 것"과 같은 결.
 
-### ☐ P2. 이름 규칙
-- 스킬: `g23-*` 접두 유지 (예외: `skill-creator` 는 범용이라 접두 없이?) ← **결정 필요**
+### ✅ P2. 이름 규칙
+- 스킬: `g23-*` 접두 유지. 예외: `skill-creator` 는 범용이라 **접두 없이** 확정.
 - 서브에이전트: 접두 없이 역할명 (`k-skill-researcher`, `gpters-case-researcher`)
-- `g23-case-post-writer` → `g23-case-writer` 로 통일? ← **결정 필요 (003)**
+- `g23-case-post-writer` → **`g23-case-writer` 개명 확정** (C4 와 함께).
+> 2026-07-03 확정.
 
 ---
 
@@ -73,8 +74,9 @@ week-1~4.md 존재. missions 는 한 주차만 읽음(P1 부합). 가벼운 점�
 003 에서 `korean-humanizer` 정신만 차용하기로 정리됨.
 - 피할 표현 짧은 목록(10개 안쪽)을 SKILL.md 인라인. → **최종 목록 확정 필요**.
 
-### ☐ C2. k-skill 접근 방식 (007)
-로컬 클론 vs 원격(GitHub) 조회. 경량 원칙상 원격 훑기 선호?
+### ✅ C2. k-skill 접근 방식 (007) → 원격 조회
+GitHub API·WebFetch 로 필요한 파일만 원격에서 훑는다. 클론 관리 부담 없음, P1 부합.
+> 2026-07-03 확정.
 
 ### 🔄 C3. 지피터스 게시판 접근 (008) — 절반 확인됨 (009 사전조사, 2026-07-03)
 - **태그 목록 페이지 = 공개.** WebFetch 로 제목·작성자·링크 열거 가능 확인.
@@ -82,8 +84,9 @@ week-1~4.md 존재. missions 는 한 주차만 읽음(P1 부합). 가벼운 점�
 - **회원 프로필 = 로그인 벽.** (`gpters.org/member/...`) → claude-in-chrome 폴백 (사용자 Chrome 로그인 상태).
 - 남은 것: **개별 글 본문**이 WebFetch 로 열리는지 → [[009-clip-gpters-writing-samples]] 실행 중 확인.
 
-### ☐ C4. case-writer 이름/개선 범위 (003)
-`g23-case-post-writer` 유지 vs `g23-case-writer` 개명. (P2 와 연동)
+### ✅ C4. case-writer 이름 → `g23-case-writer` 개명 확정
+(P2 와 함께 확정. 실행은 [[013-case-writer.task.json|task 013]] 에서.)
+> 2026-07-03 확정.
 
 ---
 
@@ -91,3 +94,6 @@ week-1~4.md 존재. missions 는 한 주차만 읽음(P1 부합). 가벼운 점�
 
 - 2026-07-03 P1 스킬 경량 원칙 확정 (Pro 전제)
 - 2026-07-03 C3 절반 확인 — 태그 목록 공개 / 회원 프로필 로그인 벽 (009 사전조사)
+- 2026-07-03 P2 이름 규칙 확정 — skill-creator 무접두, g23-case-writer 개명 (C4 포함)
+- 2026-07-03 C2 확정 — k-skill 원격 조회
+- 2026-07-03 실행 위임 체계 문서화 — task 010~013 + `_runplan.md` (남은 열린 결정: C1 상투구 목록 → task 013 에서 확정, C3 나머지 → 009/012 에서 확인)
