@@ -78,11 +78,12 @@ week-1~4.md 존재. missions 는 한 주차만 읽음(P1 부합). 가벼운 점�
 GitHub API·WebFetch 로 필요한 파일만 원격에서 훑는다. 클론 관리 부담 없음, P1 부합.
 > 2026-07-03 확정.
 
-### 🔄 C3. 지피터스 게시판 접근 (008) — 절반 확인됨 (009 사전조사, 2026-07-03)
-- **태그 목록 페이지 = 공개.** WebFetch 로 제목·작성자·링크 열거 가능 확인.
+### ✅ C3. 지피터스 게시판 접근 (008) → 전부 확인됨
+- **태그 목록 페이지 = 공개.** WebFetch 로 제목·작성자·링크 열거 가능 확인. (009 사전조사)
   (`https://www.gpters.org/ai-study-post?tag_id=...`)
-- **회원 프로필 = 로그인 벽.** (`gpters.org/member/...`) → claude-in-chrome 폴백 (사용자 Chrome 로그인 상태).
-- 남은 것: **개별 글 본문**이 WebFetch 로 열리는지 → [[009-clip-gpters-writing-samples]] 실행 중 확인.
+- **개별 글 본문 = 공개.** WebFetch 로 본문 열람·요약 가능 확인 (`/nocode/post/...` 샘플 1건, task 012 시험 실행).
+- **회원 프로필 = 로그인 벽.** (`gpters.org/member/...`) → claude-in-chrome 폴백 (사용자 Chrome 로그인 상태, 메인 세션에서).
+> 2026-07-03 확인 완료 (사전조사 009 + 시험 012). 009 본 실행에서 예외 글 나오면 008 티켓 메모로.
 
 ### ✅ C4. case-writer 이름 → `g23-case-writer` 개명 확정
 (P2 와 함께 확정. 실행은 [[013-case-writer.task.json|task 013]] 에서.)
@@ -97,3 +98,4 @@ GitHub API·WebFetch 로 필요한 파일만 원격에서 훑는다. 클론 관�
 - 2026-07-03 P2 이름 규칙 확정 — skill-creator 무접두, g23-case-writer 개명 (C4 포함)
 - 2026-07-03 C2 확정 — k-skill 원격 조회
 - 2026-07-03 실행 위임 체계 문서화 — task 010~013 + `_runplan.md` (남은 열린 결정: C1 상투구 목록 → task 013 에서 확정, C3 나머지 → 009/012 에서 확인)
+- 2026-07-03 C3 완결 — 개별 글 본문도 WebFetch 공개 확인 (task 012 시험 실행)
