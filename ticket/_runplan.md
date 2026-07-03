@@ -10,7 +10,7 @@ task.json 하나 = 세션(에이전트) 하나가 끝낼 분량. 이 문서가 �
 | 0 | `009-clip-gpters.task.json` | 지피터스 클리핑 → `_style-reference.md` | — | ⏳ 대기 (Fable 5 세션용) |
 | 1 | `010-onboarding.task.json` | welcome 신규 + setup 삭제 + missions 점검 | — | ✅ 완료 (2026-07-03, acceptance 4/4) |
 | 2 | `011-meta-tools.task.json` | skill-creator 신규 + thinking-partner 개선 | — | ✅ 완료 (2026-07-03, acceptance 4/4) |
-| 3 | `012-researchers.task.json` | 서브에이전트 2개 (.claude/agents/) | — | ⏳ 대기 |
+| 3 | `012-researchers.task.json` | 서브에이전트 2개 (.claude/agents/) | — | ✅ 완료 (2026-07-03, acceptance 4/4 · C3 완결 확인) |
 | 4 | `013-case-writer.task.json` | case-writer 개명+재작성 | **009 산출물 필수** | 🚫 blocked |
 
 010·011·012 는 서로 독립(파일 겹침 없음) → **병렬 가능**.

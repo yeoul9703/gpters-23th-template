@@ -27,9 +27,6 @@
 **만들/고칠 skill**
 - `003-g23-case-writer.md` — 담백한 사례글, AI 티 없이 · 경량 (개선) — task 013, 009 대기
 
-**서브에이전트**
-- `007-agent-k-skill-researcher.md` — k-skill 레포 조사 (신규) — task 012 실행 중
-- `008-agent-gpters-case-researcher.md` — 지피터스 사례 조사 (신규) — task 012 실행 중
 
 **실행 태스크 (Fable 5)**
 - `009-clip-gpters-writing-samples.md` (+`009-clip-gpters.task.json`) — 지피터스 사례글 클립 → case-writer 문체 레퍼런스
@@ -56,3 +53,5 @@ gpters-case-researcher ─┴─▶ ticket/clips + g23-case-writer  (조사→�
 - `006-g23-missions.md` — 4주치 점검·핸드오프 정합 (task 010, 2026-07-03)
 - `005-skill-creator.md` — 3문 인터뷰→SKILL.md 한 장 (task 011, 2026-07-03)
 - `002-g23-thinking-partner.md` — 미니 스펙 + skill-creator 핸드오프 (task 011, 2026-07-03)
+- `007-agent-k-skill-researcher.md` — .claude/agents/ 읽기 전용 조사 에이전트 (task 012, 2026-07-03)
+- `008-agent-gpters-case-researcher.md` — 동상, C3 완결 확인 (task 012, 2026-07-03)
