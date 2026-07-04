@@ -75,14 +75,27 @@ skill-creator 옆에 온디맨드 참고용으로 "Python이 실제로 필요해
 
 문서(온디맨드 레퍼런스)는 만들되 스킬 승격은 보류 — 라고 제안. 단, **범위 질문 하나**가 먼저 필요: "셋팅 가이드 문서"로 염두에 둔 게 (a) Python/uv 온디맨드 트러블슈팅만인지, (b) Windows 터미널 선택 같은 "모든 참가자가 한 번은 겪는" 내용까지 포함인지 — 답에 따라 문서를 어디 두는지(온디맨드 참고 vs welcome/README 보강)가 갈린다.
 
-## 최종 결정 (2026-07-04)
+## 최종 결정 (2026-07-04, 1차 — 이후 아래 "실제 구현"으로 수정됨)
 
 - **스킬 승격 안 함.** `g23-welcome/reference/setup-guide.md` 로 문서화 완료 — `g23-missions/reference/official-curriculum.md` 와 동일 컨벤션("본문에서 필요할 때만 열어봄, 매 세션 자동 로드 안 됨") 재사용. 새 스킬 로스터 비용 없음.
 - **범위는 (a)+(b) 둘 다** 한 파일에 담되 섹션으로 분리:
-  - §1 Windows/Mac 터미널 차이 — 빈도 높음(모든 Windows 참가자 1회) → welcome **①환경 확인**에서 직접 연결 (터미널 종류 확인 질문 1개 추가 예정).
-  - §2 Python 필요시 uv 컨벤션 — 빈도 낮음(온디맨드) → 이번 배치에서는 welcome ①과 연결하지 않음. skill-creator 쪽 연결은 별도 후속 작업으로 미룸(범위 밖 명시).
-- welcome SKILL.md 실제 변경 범위: **①에 한 줄만 추가**(Windows면 터미널 종류 질문 + reference 링크). ②~⑥ 변경 없음.
-- 다음 단계: ticket → task.json → SKILL.md 편집 + 점검 사이클로 실행. `ticket/024-*.md` 로 기록 예정.
+  - §1 Windows/Mac 터미널 차이 — 빈도 높음(모든 Windows 참가자 1회) → welcome **①환경 확인**에서 직접 연결 (터미널 종류 확인 질문 1개 추가 예정, 1차안).
+  - §2 Python 필요시 uv 컨벤션 — 빈도 낮음(온디맨드) → 이번 배치에서는 welcome ①과 연결하지 않음. skill-creator 쪽 연결은 별도 후속 작업으로 미룸(범위 밖 명시, 1차안).
+- welcome SKILL.md 실제 변경 범위(1차안): **①에 한 줄만 추가**(Windows면 터미널 종류 질문 + reference 링크). ②~⑥ 변경 없음.
+
+## 실제 구현 (ticket 025, 위 1차안에서 수정됨)
+
+ticket/025 진행 중 advisor와 한 번 더 확인한 결과, 위 1차안의 두 가지가 뒤집혔다:
+
+- **welcome ①에 질문 추가 안 함.** advisor 확인: welcome은 자체적으로 셸 명령을 내리지 않는다(②는 슬래시 커맨드, ⑤는 Claude 파일 툴) — 터미널 종류를 미리 물어봐도 welcome 흐름 안에서 쓰일 데가 없다. 대신 `g23-missions`가 `reference/official-curriculum.md`를 참조하는 것과 같은 **순수 포인터 방식**으로 처리(①환경 확인 끝에 한 줄, 새 질문 없음).
+- **skill-creator §2 연결도 같은 배치에서 완료.** "후속 작업으로 미룸"이 아니라, §2가 이번 배치 후 아무 데서도 연결 안 되는 고아 섹션이 되지 않도록 3문 인터뷰 질문3 아래에 바로 포인터 1줄 추가.
+
+최종 산출물: `setup-guide.md` 1개 + `g23-welcome/SKILL.md`·`skill-creator/SKILL.md` 포인터 각 1줄. 상세는 `ticket/025-welcome-setup-reference.md`.
+
+## 후속 검토 (2026-07-04, 별도 세션)
+
+ticket 025 완료 후 다시 점검하며 확인한 점:
+- skill-creator 질문3("터미널 명령이 필요한가?")에 "Python 아닌 터미널 명령이 필요하다"는 답이 나오는 경우 §1(Windows 터미널 차이) 포인터가 없는 갭이 있으나, 발생 빈도가 낮고 참가자 skill은 자연어 지시문 한 장이 원칙이라 **추가하지 않기로 결정** (skill-creator/SKILL.md 변경 없음).
 
 ## 관련
 - `ticket/_discuss.md` P1
