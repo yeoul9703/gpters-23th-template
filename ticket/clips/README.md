@@ -7,13 +7,14 @@
 
 1. `_template.md` 를 복사해 `NNN-짧은-슬러그.md` 로 저장 (다음 연번).
 2. **링크·왜 클립했나·내 업무에 어떻게** 세 줄만 있어도 충분. `## 글쓰기에서 훔칠 점` 도 남기면 좋다.
-3. 실제로 티켓으로 옮겨 작업하게 되면, 티켓에서 이 클립을 링크한다.
+3. **`## 원문 발췌` 는 AI가 다시 쓴 문장이 아니라 원문을 그대로 복사한다.** 문체 레퍼런스가 목적이라 이 부분만큼은 요약·재구성 금지.
+4. 실제로 티켓으로 옮겨 작업하게 되면, 티켓에서 이 클립을 링크한다.
 
 ## 문체 레퍼런스
 
 - [`_style-reference.md`](_style-reference.md) — 클립 50개에서 뽑은 "AI 티 안 나는 글" 공통 규칙 (g23-case-writer 근거)
 
-## 모은 클립 (50, task 014 · 2026-07-03)
+## 모은 클립 (50, task 014 · 2026-07-03 / 원문 발췌 추가 · task 024 · 2026-07-04)
 
 - [`001-government-report-loop-engineering.md`](001-government-report-loop-engineering.md) (ax) — 정부과제 최종 보고서 작성을 루프 엔지니어링으로 해보기
 - [`002-icp-reverse-design-outbound.md`](002-icp-reverse-design-outbound.md) (ax) — 자사 데이터로 ICP를 거꾸로 설계하고, 아웃바운드 타깃을 하루 만에 뽑은 이야기

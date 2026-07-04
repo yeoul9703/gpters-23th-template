@@ -16,6 +16,11 @@ tags: [claude-code, skill, 멀티에이전트, prd, notion-mcp]
 - `/show-me-the-prd`(9라운드 인터뷰형)로 PRD 5개를 뽑고, `/kkirikkiri` 멀티에이전트 스킬로 검토 — Critical 9 + Major 9 + Minor 7건을 PRD에 일괄 반영, 총 13개 파일 산출.
 - AI가 Notion 페이지를 WebFetch로 못 읽자 "노션 MCP 연결돼 있을 텐데?" 한 줄로 도구를 동적 로드시켜 해결.
 
+## 원문 발췌
+
+- "AI는 자기가 가진 도구를 다 못 알아챌 때가 있다. 침묵하지 말고 '그 도구 있을 텐데?' 한 줄만 던지면 길이 열린다."
+- "'전체를 자동화' 대신 '반복을 떼어내 자동화'가 핵심"
+
 ## 내 업무에 어떻게 쓸까
 
 참가자용 "인터뷰형 skill 설계 도우미" 아이디어의 원형으로 참조. 검토 결과를 Critical/Major/Minor로 등급화해 반영하는 방식도 skill 개선 사이클에 도입.
