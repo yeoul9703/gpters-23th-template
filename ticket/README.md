@@ -58,3 +58,4 @@ gpters-case-researcher ─┴─▶ ticket/clips + g23-case-writer  (조사→�
 - `014-clip-gpters-50.md` — 지피터스 사례 50개 클립 + `clips/_style-reference.md` (task 014, 2026-07-03)
 - `003-g23-case-writer.md` — g23-case-writer 개명 + 경량 재작성, C1 상투구 9개 확정 (task 013, 2026-07-03)
 - `015-clip-blank-body-diagnosis.md` — 빈 본문 원인 = Jina 동시요청 502 + 실패 오표기·재시도 부재. researcher 규칙 수정 (Fable 브랜치, 2026-07-03)
+- `025-welcome-setup-reference.md` — OS/Python 셋업 가이드를 `g23-welcome/reference/setup-guide.md` 온디맨드 문서로 분리, welcome·skill-creator에 포인터 1줄씩 연결 (스킬 승격 안 함, task 025, 2026-07-04)

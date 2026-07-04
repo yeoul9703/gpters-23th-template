@@ -1,0 +1,37 @@
+{
+  "id": "025",
+  "tickets": ["ticket/025-welcome-setup-reference.md"],
+  "title": "welcome/skill-creator에 setup-guide.md 포인터 연결",
+  "runner": "claude-sonnet",
+  "depends_on": [],
+  "goal": "이미 작성된 g23-welcome/reference/setup-guide.md 를 welcome·skill-creator 양쪽에서 참조 가능하게 포인터만 연결한다.",
+  "why": "reference 문서가 어디서도 참조되지 않으면 고아 파일이 됨. 스킬 승격 대신 포인터 1줄씩으로 P1(경량) 유지.",
+
+  "constraints": [
+    "새 스킬 만들지 않는다 (g23-setup 재생성 금지).",
+    "welcome ①에 새 질문을 추가하지 않는다 — welcome은 셸 명령을 직접 안 내리므로 미리 물어도 안 쓰임.",
+    "포인터 문구는 g23-missions/SKILL.md 의 reference 참조 스타일(경로 + '필요할 때만 참고 — 평소엔 안 읽음')을 그대로 미러링."
+  ],
+
+  "steps": [
+    { "n": 1, "do": "g23-welcome/SKILL.md 에 reference/setup-guide.md 포인터 1줄 추가." },
+    { "n": 2, "do": "skill-creator/SKILL.md 에 ../g23-welcome/reference/setup-guide.md §2 포인터 1줄 추가." },
+    { "n": 3, "do": "'처음 온 Windows 참가자' 역할극으로 welcome ①→⑥ 흐름 자가 점검 + rg 'setup-guide.md' 로 양쪽 참조 확인." },
+    { "n": 4, "do": "025 티켓 체크리스트 갱신, status: done. ticket/README.md 인덱스 이동." }
+  ],
+
+  "outputs": [
+    "g23-welcome/SKILL.md 에 포인터 1줄",
+    "skill-creator/SKILL.md 에 포인터 1줄",
+    "025 티켓 done"
+  ],
+
+  "acceptance": [
+    "rg 'setup-guide.md' 결과에 g23-welcome/SKILL.md, skill-creator/SKILL.md 둘 다 포함.",
+    "welcome ①에 질문이 추가되지 않았다(순수 포인터만).",
+    "① → ⑥ 시나리오가 기존과 동일하게 이어진다(A1~A5 결정과 충돌 없음)."
+  ],
+
+  "on_block": "포인터 문구 스타일이 g23-missions와 크게 다르면 임의로 새 스타일 만들지 말고 025 티켓 '막힌 점'에 기록.",
+  "done_when": "outputs 3종 + acceptance 3개 만족 → 커밋(메시지에 'task 025' 명시)."
+}
