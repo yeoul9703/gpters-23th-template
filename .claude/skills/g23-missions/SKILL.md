@@ -20,7 +20,7 @@ description: 지피터스 23기 k-skill 스터디의 주차별 미션을 안내�
 |---|---|---|
 | 1주차 | k-skill 사례로 첫 skill 만들기 | 첫 번째 나만의 skill |
 | 2주차 | 15분 안에 끝나는 두 번째 skill | 두 번째 skill |
-| 3주차 | 만든 skill들을 하나의 루틴으로 묶기 | 실행되는 스타트 루틴 |
+| 3주차 | 만든 skill들을 순서대로 실행하는 skill로 묶기 | domino-skill(추천) 1개 |
 | 4주차 | 4주 사용 경험 공유 + 사례글 | skill 3개 + 사례글 1개 |
 
 ## 최종 결과물 (4주 끝에 반드시)
@@ -34,3 +34,5 @@ description: 지피터스 23기 k-skill 스터디의 주차별 미션을 안내�
 - skill 후보를 못 고르겠다면 → `g23-thinking-partner`
 - 참고 사례를 찾고 싶다면 → `g23-k-skills-search`
 - 사용 기록·사례글을 쓸 때 → `g23-case-writer`, 양식은 `examples/`
+
+> 원본 커리큘럼 근거: `reference/official-curriculum.md` (gpters.org 공식 스터디 페이지 스냅샷). 주차 내용을 고치거나 문구 근거를 확인할 때만 참고한다 — 평소 안내에는 읽지 않는다.
