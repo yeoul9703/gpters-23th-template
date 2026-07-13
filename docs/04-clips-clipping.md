@@ -25,5 +25,5 @@ tags: []
 
 ## 연결
 
-- 서브에이전트 `gpters-case-researcher` 가 후보 글을 물어오면 → clips 로 저장 ([08](08-case-writer-research.md), [10](10-next-steps.md))
+- `gpters-clipper` 스킬이 목록/태그 검색(주제만 줘도 후보를 찾아줌)부터 발췌+전문 클립까지 한 번에 처리 → clips 로 저장 ([10](10-next-steps.md)). 서브에이전트 `gpters-case-researcher` 가 후보를 물어오던 방식은 보류됨(2026-07-13, [08](08-case-writer-research.md)).
 - 클립이 사례글 재료가 됨 → `g23-case-writer` ([09](09-case-writer-intent.md))

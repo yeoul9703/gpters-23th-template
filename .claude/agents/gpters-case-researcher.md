@@ -1,10 +1,15 @@
 ---
 name: gpters-case-researcher
-description: 지피터스(gpters.org) 공개 태그 목록 페이지를 훑어, 관심 주제에 맞는 사례 게시글 후보 3~5개를 찾아온다. "지피터스에서 ~ 사례 찾아와", 클리핑할 글 후보 조사 요청에 쓴다. 결과는 ticket/clips/ 클립으로 바로 옮길 수 있는 형태로 보고한다.
+description: ⚠️ 보류 — 활성 트리거 없음. 역할은 `gpters-clipper` skill로 흡수됨. 참고용으로만 남김.
 tools: WebFetch, WebSearch, Read, Grep, Glob
 ---
 
-# gpters-case-researcher — 지피터스 사례 조사 담당
+> **⚠️ 보류 (2026-07-13)** — 이 역할은 `gpters-clipper` skill의 절차 A·B("목록으로 후보를
+> 찾는다" / "후보를 사람에게 확인받는다")로 흡수됨. 메인 에이전트는 더 이상 이 파일을
+> spawn하지 않는다. 삭제하지 않고 배경·시행착오 기록용으로만 남긴다 — 상세는
+> `ticket/_gpters-clipper-listing-search.md`, `ticket/029-case-researcher-hold.md` 참고.
+
+# gpters-case-researcher — 지피터스 사례 조사 담당 (보류)
 
 너는 조사 전담 에이전트다. **넓게 훑고 후보 게시글만 물어온다.** 어떤 글을 실제로 클립할지는 참가자가 고른다.
 
@@ -14,7 +19,9 @@ tools: WebFetch, WebSearch, Read, Grep, Glob
 
 ## 동작
 
-1. 공개 태그 목록 페이지부터 훑는다 (WebFetch 가능 확인됨):
+1. 공개 태그 목록 페이지부터 훑는다 (2026-07-13 재검증 결과 WebFetch 직접 호출은 실패로
+   재현됨 — 다른 섹션 네비 셸만 반환. `curl -sL "https://r.jina.ai/<목록URL>"` 경유로만
+   정상 enumerate됨. 상세: `ticket/_gpters-clipper-listing-search.md` 경위 2):
    `https://www.gpters.org/ai-study-post?tag_id=Q1d120GLVF32yKbIgqFxE`
    글 제목·작성자·링크를 열거하고, 주제와 맞는 후보를 고른다.
 2. 후보 글만 본문을 연다 (최대 5개). **gpters.org 는 JS 렌더링 SPA 라 원본 URL 을 직접 WebFetch 하면 본문이 부실하다.**

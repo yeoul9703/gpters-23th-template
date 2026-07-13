@@ -80,11 +80,17 @@ GitHub API·WebFetch 로 필요한 파일만 원격에서 훑는다. 클론 관�
 > 2026-07-03 확정.
 
 ### ✅ C3. 지피터스 게시판 접근 (008) → 전부 확인됨
-- **태그 목록 페이지 = 공개.** WebFetch 로 제목·작성자·링크 열거 가능 확인. (009 사전조사)
+- **태그 목록 페이지 = 공개.** ~~WebFetch 로 제목·작성자·링크 열거 가능 확인.~~ (009 사전조사)
   (`https://www.gpters.org/ai-study-post?tag_id=...`)
+  > **2026-07-13 재검증(gpters-clipper 목록 검색 결정 gate) — WebFetch 직접 호출은 실패로
+  > 재현됨**(다른 섹션 네비 셸만 반환). 대신 `curl -sL "https://r.jina.ai/<목록URL>"` 경유는
+  > 게시물 31개까지 정상 enumerate됨. 사이트가 그 사이 바뀌었는지, 009 당시 다른 조건이었는지는
+  > 불명 — **지금 기준으로는 목록 페이지 fetch에 WebFetch 대신 jina reader를 쓴다.**
+  > 자세한 내용: [`_gpters-clipper-listing-search.md`](_gpters-clipper-listing-search.md) 경위 2.
 - **개별 글 본문 = 공개.** WebFetch 로 본문 열람·요약 가능 확인 (`/nocode/post/...` 샘플 1건, task 012 시험 실행).
 - **회원 프로필 = 로그인 벽.** (`gpters.org/member/...`) → claude-in-chrome 폴백 (사용자 Chrome 로그인 상태, 메인 세션에서).
 > 2026-07-03 확인 완료 (사전조사 009 + 시험 012). 009 본 실행에서 예외 글 나오면 008 티켓 메모로.
+> 태그 목록 페이지의 WebFetch 가능 여부는 2026-07-13 재검증으로 정정됨(위 참고).
 
 ### ✅ C4. case-writer 이름 → `g23-case-writer` 개명 확정
 (P2 와 함께 확정. 실행은 [[013-case-writer.task.json|task 013]] 에서.)

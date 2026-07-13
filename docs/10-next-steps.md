@@ -6,8 +6,9 @@
 g23-welcome ──안내──▶ g23-missions           (온보딩 → 매주 미션)
    └ g23-setup 흡수
 g23-thinking-partner ──▶ skill-creator        (범위 좁히기 → 실제 생성)
-k-skill-researcher ─┐
-gpters-case-researcher ─┴─▶ ticket/clips + g23-case-writer   (조사 → 클립 → 사례글)
+k-skill-researcher (읽기 전용 조사, 활성)
+gpters-clipper ──▶ ticket/clips + g23-case-writer   (목록/태그 검색 → 클립 → 사례글, 028)
+gpters-case-researcher — ⚠️ 보류(2026-07-13). 역할은 gpters-clipper 로 흡수됨 (029).
 ```
 
 ## 추천 작업 순서

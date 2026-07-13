@@ -37,3 +37,6 @@ done: 2026-07-03
 - 개별 글 본문도 WebFetch 로 열림 (012 시험 확인). 회원 프로필(`gpters.org/member/...`)만 로그인 벽 → 그 경우 claude-in-chrome 폴백 (메인 세션에서)
 - 이 에이전트가 자동화할 일의 **첫 수동 실행 = [[009-clip-gpters-writing-samples]]**. 009 본 실행 결과로 스펙 추가 보강 가능.
 - 관련: [[003-g23-case-writer]] 사례글 재료로 이어짐, ticket/clips 로 저장
+- **2026-07-13: 보류 처리됨 — [[029-case-researcher-hold]].** 역할이 `gpters-clipper` skill의
+  목록/태그 검색 단계(028)로 흡수되어, 이 agent는 더 이상 활성 트리거가 없다. 파일은 참고용으로
+  남아 있음(삭제 안 함).

@@ -38,11 +38,16 @@
 g23-welcome ──안내──▶ g23-missions        (온보딩→매주 미션)
    └ g23-setup 흡수
 g23-thinking-partner ──▶ skill-creator     (범위 좁히기→실제 생성)
-k-skill-researcher ─┐
-gpters-case-researcher ─┴─▶ gpters-clipper ─▶ ticket/clips + g23-case-writer  (조사→클립(원문 발췌+원문 전문 필수)→사례글)
+k-skill-researcher (읽기 전용 조사, 활성)
+
+gpters-clipper ──▶ ticket/clips + g23-case-writer   (목록/태그 검색→클립(원문 발췌+원문 전문 필수)→사례글)
    └ 첫 수동 실행 = 009 (Fable 5, task.json) → clips/_style-reference.md
    └ 클립 형식 결함(원문 발췌 누락) 발견·수정 = 024 → gpters-clipper 스킬 신설
    └ 발췌만으론 글 구조가 안 보임 → 원문 전문 추가 = 026 (task.json, `/goal` 실행 대기)
+   └ 입문자 단일 흐름을 위해 목록/태그 검색 진입 경로(A·B 단계) 추가(개명 없음) = 028 (done, task 030)
+
+gpters-case-researcher — ⚠️ 보류 (029, done, task 030). 목록/태그 훑기 역할은
+gpters-clipper의 A·B 단계로 흡수됨. agent 파일은 참고용으로 남아 있음(삭제 안 함).
 ```
 
 ## done
@@ -63,3 +68,4 @@ gpters-case-researcher ─┴─▶ gpters-clipper ─▶ ticket/clips + g23-cas
 - `016~020` (스터디 미션, 인덱스+자식 4개) — `missions/week-1~4.md`를 gpters.org 공식 커리큘럼에 맞춤. week-4 스터디장 세션 한 줄 반영(019), week-3 domino-skill을 예시 대신 thinking-partner 되묻기 흐름으로 보강(018), week-2~4 사례글 예시 다양화는 사용자 반려로 스킵·태그 스윕만 확인(020) ("스터디 미션 점검" 세션, 2026-07-04)
 - `024-clip-verbatim-excerpts.md` — clips/ 50개 전부에 `## 원문 발췌`(verbatim) 섹션 추가 + 사실오류 3건(007/009/038) 수정 + `gpters-clipper` 스킬 신설로 재발 방지 (task 024, 2026-07-04)
 - `021-welcome-daily-moments-detail.md` — 1차("현재 상태 유지") 결정을 별도 세션에서 재검토해 뒤집음 → 세 시점 질문에 예시 구체화, 미니 실습 예시 코드 3개(아침/점심/퇴근) 전부 반영, ⑤-4 죽은 분기(skill-creator 부재 체크) 삭제. thinking-partner 확산은 안 함 유지 (2026-07-04)
+- `_gpters-clipper-listing-search.md`, `028-gpters-clipper-listing-search.md`, `029-case-researcher-hold.md` — gpters-clipper에 목록/태그 검색 진입 경로(A·B 단계) 추가 + gpters-case-researcher agent 보류 처리(삭제 안 함) + docs/04·docs/10 관계 서술 정정 (결정 gate + 3사이클 cold-read 리뷰, task 030, 2026-07-13)
