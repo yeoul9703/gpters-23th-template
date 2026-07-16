@@ -38,6 +38,7 @@ Claude가 여러분의 OS, Claude Code 사용 경험, 업무를 몇 가지 물�
 ├── README.md          ← 지금 읽는 파일
 ├── CLAUDE.md          ← Claude가 매 세션 참고하는 스터디 가이드
 ├── examples/          ← 사용 기록·사례글 작성 양식
+├── clips/             ← 지피터스 사례 클립 (사례글 쓸 때 문체 참고자료)
 └── .claude/skills/    ← 스터디용 도우미 skill 5개 (주차별 미션은 g23-missions/reference/ 안에 있음)
 ```
 
