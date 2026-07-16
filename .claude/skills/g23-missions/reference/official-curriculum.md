@@ -1,6 +1,6 @@
 # 공식 커리큘럼 스냅샷 — 23기 K스킬자동화
 
-> gpters.org에 이미 공개된 스터디 소개 페이지의 스냅샷. `missions/week-*.md`를 고치거나 문구 근거를 확인할 때만 열어본다 — 매 세션 자동으로 읽지 않는다.
+> gpters.org에 이미 공개된 스터디 소개 페이지의 스냅샷. `reference/week-*.md`를 고치거나 문구 근거를 확인할 때만 열어본다 — 매 세션 자동으로 읽지 않는다.
 > 원문: https://www.gpters.org/ai-study-list/post/babbeun-silmujareul-wihan-oneul-baeweo-naeil-sseomeogneun-k-seukil-4HGbQhiSgpP2S2E (Jina Reader 경유로 확보, 2026-07-04)
 
 ## 기본 정보
@@ -28,7 +28,7 @@
 2. k-skill로 사업자등록, 등기부등본 자동화
 3. 쿠팡, 네이버 검색 스킬로 장 보기 자동화
 
-`missions/week-*.md`의 "스터디장 사례글" 줄이 전부 "아침 루틴"으로 반복되던 문제 — 이 3개를 주차별로 나눠 배치하면 다양성이 생긴다.
+`reference/week-*.md`의 "스터디장 사례글" 줄이 전부 "아침 루틴"으로 반복되던 문제 — 이 3개를 주차별로 나눠 배치하면 다양성이 생긴다.
 
 ## 추천 대상
 

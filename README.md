@@ -27,7 +27,7 @@ Claude가 여러분의 OS, Claude Code 사용 경험, 업무를 몇 가지 물�
 이번 주 미션을 알려줘.
 ```
 
-`missions/` 안의 주차별 목표와 제출물을 Claude가 정리해서 안내합니다.
+`g23-missions` 스킬이 주차별 목표와 제출물을 정리해서 안내합니다.
 
 ---
 
@@ -37,9 +37,8 @@ Claude가 여러분의 OS, Claude Code 사용 경험, 업무를 몇 가지 물�
 .
 ├── README.md          ← 지금 읽는 파일
 ├── CLAUDE.md          ← Claude가 매 세션 참고하는 스터디 가이드
-├── missions/          ← 주차별 미션 (week-1 ~ week-4)
 ├── examples/          ← 사용 기록·사례글 작성 양식
-└── .claude/skills/    ← 스터디용 도우미 skill 5개
+└── .claude/skills/    ← 스터디용 도우미 skill 5개 (주차별 미션은 g23-missions/reference/ 안에 있음)
 ```
 
 ## 포함된 skill

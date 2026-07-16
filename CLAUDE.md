@@ -15,7 +15,7 @@
 
 ## 폴더 구조
 
-- `missions/week-*.md` — 주차별 목표·제출물·체크리스트
+- `.claude/skills/g23-missions/reference/week-*.md` — 주차별 목표·제출물·체크리스트 (g23-missions 스킬이 매번 읽는 미션 원문)
 - `examples/skill-log-template.md` — skill별 사용 기록 양식
 - `examples/case-post-notes-template.md` — 사례글 작성용 메모 양식
 - `.claude/skills/` — 스터디용 도우미 skill 5개
