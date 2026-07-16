@@ -1,6 +1,7 @@
 ---
 title: <게시글 제목>
 source: <지피터스 게시글 링크>
+author: <원문 작성자 이름 — 본문에 안 보이면 빈 값으로 둔다>
 category: best      # best(베스트 사례) | ax(ax 사례)
 clipped: <클립한 날짜 YYYY-MM-DD>
 tags: []
