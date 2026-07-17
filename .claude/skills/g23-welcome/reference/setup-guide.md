@@ -3,7 +3,7 @@
 > `g23-welcome` 본문에서 필요할 때만 열어본다. 매 세션 자동으로 읽지 않는다.
 > 관련 논의: `context/python-setup-uv-consistency-2026-07-04.md` · 관련 원칙: `ticket/_discuss.md` P1(스킬은 가볍게, Python 사전교육 안 함)
 
-## 1. Windows/Mac 터미널 차이 — ①환경 확인에서 필요할 때만
+## 1. Windows/Mac 터미널 차이 — g23-setup의 "시스템 감지" 단계에서 필요할 때만
 
 - **macOS**: 터미널 앱 상관없이(Terminal/iTerm2 등) Claude Code가 그대로 동작. 기본 셸은 zsh.
 - **Windows**: 터미널이 여러 종류(PowerShell / Git Bash / WSL) — 참가자가 뭘 쓰는지에 따라 명령 문법이 갈린다(경로 구분자, `ls` vs `dir`, 따옴표 규칙 등). Claude Code 자체는 셋 다에서 동작하지만, **명령 예시를 안내할 땐 참가자가 쓰는 터미널에 맞춰야 한다** (CLAUDE.md "bash를 전제하지 않는다" 원칙).
