@@ -39,7 +39,7 @@ Claude가 여러분의 OS, Claude Code 사용 경험, 업무를 몇 가지 물�
 ├── CLAUDE.md          ← Claude가 매 세션 참고하는 스터디 가이드
 ├── examples/          ← 사용 기록·사례글 작성 양식
 ├── clips/             ← 지피터스 사례 클립 (사례글 쓸 때 문체 참고자료)
-└── .claude/skills/    ← 스터디용 도우미 skill 5개 (주차별 미션은 g23-missions/reference/ 안에 있음)
+└── .claude/skills/    ← 스터디용 도우미 skill 모음 (주차별 미션은 g23-missions/reference/ 안에 있음)
 ```
 
 ## 포함된 skill
@@ -48,10 +48,11 @@ Claude Code에게 자연어로 말하면 아래 skill들이 알아서 켜집니�
 
 | Skill | 언제 쓰나 |
 |---|---|
-| `g23-welcome` | 처음 시작할 때 — 셋업부터 첫 skill 실습까지 온보딩 |
+| `g23-welcome` | 처음 시작할 때 — 셋업부터 첫 skill 실습까지 온보딩 (내부적으로 `g23-setup`·`g23-kskill-intro`를 순서대로 부릅니다) |
 | `g23-missions` | 이번 주 무엇을 해야 하는지 확인할 때 |
 | `g23-thinking-partner` | 내 반복 업무에서 skill 후보를 고를 때 |
 | `g23-k-skills-search` | 참고할 k-skill 사례를 찾을 때 |
+| `skill-creator` | 고른 후보를 실제 SKILL.md로 만들 때 |
 | `g23-case-writer` | 사용 기록으로 사례글을 쓸 때 |
 
 ## 4주 후 손에 남는 것

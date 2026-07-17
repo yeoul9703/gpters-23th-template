@@ -18,7 +18,7 @@
 - `.claude/skills/g23-missions/reference/week-*.md` — 주차별 목표·제출물·체크리스트 (g23-missions 스킬이 매번 읽는 미션 원문)
 - `examples/skill-log-template.md` — skill별 사용 기록 양식
 - `examples/case-post-notes-template.md` — 사례글 작성용 메모 양식
-- `.claude/skills/` — 스터디용 도우미 skill 5개
+- `.claude/skills/` — 스터디용 도우미 skill 모음 (`g23-welcome`이 온보딩 중 `g23-setup`·`g23-kskill-intro`를 내부적으로 부름)
 - 참가자가 만드는 skill도 `.claude/skills/{skill-name}/SKILL.md` 에 둔다
 
 ## 작업 지침
