@@ -1,6 +1,6 @@
 ---
 name: gpters-clipper
-description: 지피터스(gpters.org) 게시글을 찾아 clips/ 에 정확한 형식으로 클립한다. 원문 발췌(verbatim)와 원문 전문(全文)을 반드시 포함해 g23-case-writer의 문체 레퍼런스로 실제로 쓸 수 있게 만든다. URL을 이미 아는 경우("이 글 클립해줘", "지피터스 이거 클리핑", "이 링크 클립")뿐 아니라, 주제/태그만 주는 경우("~ 관련 사례 찾아줘", "지피터스에서 ~ 사례 찾아와", "~ 관련 글 찾아줘")도 목록 페이지부터 훑어 후보를 찾아준 뒤 클립까지 이어서 처리한다. 다음에는 트리거하지 않는다 — k-skill 레포에서 자동화 사례를 찾고 싶으면(→ g23-k-skills-search). 이 스킬은 이 참가자 템플릿 전용 인스턴스다 — hub의 projects/gpters-23-k-skill/ 안 동명 스킬과는 별개다.
+description: 지피터스(gpters.org) 게시글을 clips/ 에 정확한 형식으로 클립한다 — verbatim(원문 발췌+전문) 보존이 핵심이라 scripts/ 파이프라인을 쓴다. URL을 이미 아는 경우("이 글 클립해줘", "지피터스 이거 클리핑", "이 링크 클립")는 바로 클립한다. 주제만 아는 경우("~ 사례를 clips에 추가해줘", "~ 관련 글 클립해줘")엔 핵심 키워드를 여러 개로 넓혀 gpters 사이트를 체계적으로 훑은 뒤 클립까지 처리한다. 그냥 참고만 필요하고 clips에 저장까지는 필요 없으면 이 스킬 대신 CLAUDE.md 원칙에 따라 `gpters-case-researcher`가 자동으로 가볍게 찾아준다 — 다음에는 트리거하지 않는다: k-skill 레포 사례는(→ k-skill-researcher), 참고만 하고 싶으면(→ gpters-case-researcher). 이 스킬은 이 참가자 템플릿 전용 인스턴스다 — hub의 projects/gpters-23-k-skill/ 안 동명 스킬과는 별개다.
 ---
 
 # gpters-clipper — 지피터스 게시글 정확하게 클리핑하기
@@ -16,14 +16,19 @@ description: 지피터스(gpters.org) 게시글을 찾아 clips/ 에 정확한 �
 
 ## 절차
 
-A. **(주제/태그만 왔을 때) 목록에서 후보를 찾는다.**
-   ```
-   uv run .claude/skills/gpters-clipper/scripts/fetch_list.py "<목록 또는 태그 URL>"
-   ```
-   - 출력은 `제목<TAB>URL` 한 줄씩. 태그 URL: `https://www.gpters.org/ai-study-post?tag_id=<id>`, 전체 목록: `https://www.gpters.org/ai-study-post`.
-   - 무한스크롤 첫 배치(~30개)만 잡힌다 — 더 있을 수 있다고 안내하고, 그 이상은 긁지 않는다.
-   - `FETCH_FAILED`(exit 1)면 후보를 지어내지 않는다.
-   - 제목 중 주제와 맞는 후보 3~5개를 추린다.
+A. **(주제/태그만 왔을 때) 후보를 찾는다 — 키워드 검색을 우선한다.**
+   - 태그 기반 목록은 딱 맞는 태그가 있을 때만 잘 먹는다. 태그 없는 주제는 후보를
+     하나도 못 찾는 걸 실측으로 확인했다([[037-kskill-search-inline-fallback]]/
+     [[039-reference-search-participant-flow]] AB 테스트). 그래서 **핵심 키워드를
+     5~10개로 넓혀 `WebSearch("site:gpters.org <키워드>")`로 먼저 찾는다**
+     (`gpters-case-researcher`와 같은 전략, 이쪽은 더 철저하게 — 후보가 부족하면
+     키워드를 더 늘려 계속 찾는다).
+   - 그래도 부족하거나 태그가 명확히 있으면 목록도 같이 본다:
+     ```
+     uv run .claude/skills/gpters-clipper/scripts/fetch_list.py "<목록 또는 태그 URL>"
+     ```
+     출력은 `제목<TAB>URL` 한 줄씩. 태그 URL: `https://www.gpters.org/ai-study-post?tag_id=<id>`, 전체 목록: `https://www.gpters.org/ai-study-post`. 무한스크롤 첫 배치(~30개)만 잡힌다 — 더 있을 수 있다고 안내하고, 그 이상은 긁지 않는다. `FETCH_FAILED`(exit 1)면 후보를 지어내지 않는다.
+   - 키워드 검색·목록 결과를 합쳐 주제와 맞는 후보 3~5개를 추린다.
 
 B. **(주제/태그만 왔을 때) 후보를 사람에게 확인받는다.**
    - 후보 3~5개(제목·URL·왜 맞는지 한 줄)를 나열하고 참가자가 고르게 한다.
@@ -73,4 +78,6 @@ B. **(주제/태그만 왔을 때) 후보를 사람에게 확인받는다.**
 - [[024-clip-verbatim-excerpts]] — 스킬이 생긴 배경 (클립 50개가 전부 AI 요약이었던 결함).
 - [[026-clip-full-body-text]] — 원문 전문 요구 + 백필 사건 기록 (프롬프트 미준수 → bash 스크립트 → 셸 오염 → Python+selector로 해결).
 - [[015-clip-blank-body-diagnosis]] — 순차 실행·재시도 규칙의 근거 (Jina 간헐 502).
-- `.claude/agents/gpters-case-researcher.md` — ⚠️ 보류. 후보 조사 역할은 A·B 단계로 흡수됨.
+- `.claude/agents/gpters-case-researcher.md` — 가벼운 참고용 검색 담당(2026-07-17
+  부활, 키워드 검색 전략). clips에 실제로 저장까지 할 때만 이 스킬(gpters-clipper)로
+  넘어온다.
