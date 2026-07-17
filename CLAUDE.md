@@ -15,6 +15,7 @@
 
 ## 폴더 구조
 
+- `CLAUDE.local.md` — 내 이름·업무 맥락 등 개인 정보 (`g23-setup`이 만듦). `.gitignore` 처리돼 있어 git에는 안 실린다 — 이 파일(`CLAUDE.md`)은 스터디 공용 가이드라 개인 정보를 안 담는다.
 - `.claude/skills/g23-missions/reference/week-*.md` — 주차별 목표·제출물·체크리스트 (g23-missions 스킬이 매번 읽는 미션 원문)
 - `examples/skill-log-template.md` — skill별 사용 기록 양식
 - `examples/case-post-notes-template.md` — 사례글 작성용 메모 양식

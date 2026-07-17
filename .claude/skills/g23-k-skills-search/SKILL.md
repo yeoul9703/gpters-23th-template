@@ -23,12 +23,8 @@ description: k-skill 레포에서 내 업무에 참고할 만한 자동화 사�
 4. 참가자가 하나를 고르면, 그 구조를 내 업무 문장에 맞게 바꾼 `SKILL.md` 초안을 함께 만든다.
 
 ## 설치해서 직접 써보기 (선택)
-그대로 실행해보고 싶으면 플러그인으로 설치할 수 있다.
-```text
-/plugin marketplace add NomaDamas/k-skill
-```
-이후 `/k-skill:<skill-name>`로 실행하고, 자격증명이 필요하면 `k-skill-setup`으로 설정한다.
-로컬 clone은 필수가 아니다. 필요할 때만 안내한다.
+그대로 실행해보고 싶으면 "k-skill 설치해줘"라고 말한다 — `g23-kskill-intro`가 마켓플레이스
+설치부터 실제 실행까지 안내한다. 로컬 clone은 필요 없다.
 
 ## 원칙
 - "k-skill이 다 해준다"가 아니라 "사례를 내 업무로 번역한다"는 태도를 유지한다.

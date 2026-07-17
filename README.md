@@ -42,6 +42,8 @@ Claude가 여러분의 OS, Claude Code 사용 경험, 업무를 몇 가지 물�
 └── .claude/skills/    ← 스터디용 도우미 skill 모음 (주차별 미션은 g23-missions/reference/ 안에 있음)
 ```
 
+> `CLAUDE.local.md`는 clone 직후엔 없다가 `g23-setup` 실행 후 생깁니다 — 내 이름·업무 맥락 등 개인 정보용이라 `.gitignore` 처리돼 있고 git에는 안 실립니다.
+
 ## 포함된 skill
 
 Claude Code에게 자연어로 말하면 아래 skill들이 알아서 켜집니다. 슬래시 명령으로 직접 부를 수도 있습니다.
