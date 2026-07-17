@@ -1,4 +1,4 @@
-# clips — 지피터스 사례 클리핑
+# data — 지피터스 사례 클리핑
 
 지피터스 "베스트 사례"·"ax" 사례 중 **진짜 쓸모 있는 글**만 모아둔다.
 많이 모으는 게 목적이 아니다. 나중에 내 skill/업무에 써먹을 것만.
@@ -9,7 +9,6 @@
 2. **링크·왜 클립했나·내 업무에 어떻게** 세 줄만 있어도 충분. `## 글쓰기에서 훔칠 점` 도 남기면 좋다.
 3. **`## 원문 발췌` 는 AI가 다시 쓴 문장이 아니라 원문을 그대로 복사한다.** 문체 레퍼런스가 목적이라 이 부분만큼은 요약·재구성 금지.
 4. **`## 원문 전문` 에 기사 본문 전체를 문단 그대로 붙여넣는다.** 발췌 2~3줄만으론 글 전체의 구성·논증 흐름이 안 보인다. `uv run .claude/skills/gpters-clipper/scripts/fetch_post.py "<원본 URL>"` 의 stdout을 그대로 쓰고(WebFetch는 모델이 요약·재구성하므로 금지), **4-backtick 펜스(````)**로 감싸 본문 안 코드블록에도 구조가 깨지지 않게 한다. 스크립트가 사이트 셸을 걸러내고 본문만 준다 — 단, 끝부분에 그 글의 댓글이 이어질 수 있다(잘라내도 되고, 애매하면 그대로 둔다).
-5. 실제로 티켓으로 옮겨 작업하게 되면, 티켓에서 이 클립을 링크한다.
 
 ## 문체 레퍼런스
 
@@ -17,9 +16,9 @@
 
 ## 사무직 보편 업무 예시 찾기
 
-특정 직군이 아닌 사무직이면 공감할 업무(이메일·문서관리·검수·보고서·HR 등) 사례만 보고 싶으면 `tags`에 `office-general`이 붙은 클립을 찾는다 (`grep -l "office-general" clips/*.md`, 25개). 경위: [[022-clip-office-worker-skill-examples]].
+특정 직군이 아닌 사무직이면 공감할 업무(이메일·문서관리·검수·보고서·HR 등) 사례만 보고 싶으면 `tags`에 `office-general`이 붙은 클립을 찾는다 (`grep -l "office-general" data/*.md`, 25개).
 
-## 모은 클립 (63, task 014 · 2026-07-03 / 원문 발췌 추가 · task 024 · 2026-07-04 / 원문 전문 추가 · task 026 · 2026-07-14 — `scripts/fetch_post.py`(uv Python + selector)로 51개 전부 재백필, 전수 검증 51/51 clean. 경위: [[026-clip-full-body-text]] / 사무직 보편 업무 관점 12개 추가 + 기존 13개 office-general 재태깅 · task 022 · 2026-07-14)
+## 모은 클립 (63)
 
 - [`001-government-report-loop-engineering.md`](001-government-report-loop-engineering.md) (ax) — 정부과제 최종 보고서 작성을 루프 엔지니어링으로 해보기
 - [`002-icp-reverse-design-outbound.md`](002-icp-reverse-design-outbound.md) (ax) — 자사 데이터로 ICP를 거꾸로 설계하고, 아웃바운드 타깃을 하루 만에 뽑은 이야기
@@ -71,7 +70,7 @@
 - [`048-instagram-cardnews-8slide-pipeline.md`](048-instagram-cardnews-8slide-pipeline.md) (best) — "[활용 사례] Claude로 인스타 카드뉴스 8슬라이드 자동 생성한 후기"
 - [`049-interview-multiagent-skill-combo.md`](049-interview-multiagent-skill-combo.md) (best) — 스킬로 스킬을 만든 하루 — 인터뷰형 스킬과 멀티에이전트 스킬 조합
 - [`050-ralph-wiggum-goal-content-loop.md`](050-ralph-wiggum-goal-content-loop.md) (best) — 랄프 위검 방식으로 GSC 트래픽 2배 콘텐츠 무한 생성 — Claude Code /goal 활용기
-- [`051-chatbot-vs-agent-openclaw-class40.md`](051-chatbot-vs-agent-openclaw-class40.md) (ax) — 뽀짝이의 OpenClaw 수업 #40 — 챗봇과 에이전트의 결정적 차이 (gpters-clipper 스크립트 파이프라인 검증용, task 026)
+- [`051-chatbot-vs-agent-openclaw-class40.md`](051-chatbot-vs-agent-openclaw-class40.md) (ax) — 뽀짝이의 OpenClaw 수업 #40 — 챗봇과 에이전트의 결정적 차이
 - [`052-inquiry-alert-loop-zero-miss.md`](052-inquiry-alert-loop-zero-miss.md) (ax, office) — 매번 까먹던 교육 문의, Claude Code로 '놓침 0' 자동 알림 루프 만들기
 - [`053-company-doc-detect-approve-loop.md`](053-company-doc-detect-approve-loop.md) (ax, office) — 회사 소개 문서를, '감지→판정→승인' 루프로 자동 업데이트 되게 바꾸는 시도
 - [`054-inspection-work-self-grading-loop.md`](054-inspection-work-self-grading-loop.md) (ax, office) — 매주 수 시간 걸리던 검수 업무, 루프 엔지니어링으로 자동 채점 루프 만들기

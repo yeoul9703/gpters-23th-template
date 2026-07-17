@@ -9,25 +9,31 @@
 
 ## 시작하기 (3단계)
 
-### 1. 이 폴더를 Claude Code로 엽니다
+### 1. GitHub에서 이 저장소를 clone하고 Claude Code로 엽니다
 
-이 폴더를 원하는 위치에 두고, 터미널에서 폴더로 이동한 뒤 `claude` 를 실행하거나 Claude Code에서 이 폴더를 엽니다.
+clone한 폴더에서 `claude`를 실행하거나 Claude Code로 폴더를 엽니다.
 
 ### 2. Claude Code에 아래 문장을 그대로 붙여넣습니다
 
 ```text
-이 폴더의 README.md와 CLAUDE.md를 읽고, g23-welcome skill을 실행해서 스터디 시작을 도와줘.
+스터디 시작 도와줘
 ```
 
-Claude가 여러분의 OS, Claude Code 사용 경험, 업무를 몇 가지 물어보고 스터디를 시작할 준비를 함께 잡아줍니다.
+`g23-welcome`이 초기 설정, 실제 마켓컬리 검색, 첫 장보기 skill, 4주 자동화 로드맵,
+OT 사례 초안까지 50분 흐름으로 안내합니다.
 
-### 3. 이번 주 미션을 확인합니다
+### 3. 실제 상품 URL을 확인한 뒤 2주차 미션으로 넘어갑니다
+
+`grocery-result.md`에 실제 마켓컬리 상품 URL이 있고, 장보기 skill 실행·
+`automation-roadmap.html`·OT 사례 초안까지 마쳤다면 아래처럼 말해보세요.
 
 ```text
-이번 주 미션을 알려줘.
+2주차 미션 알려줘
 ```
 
-`g23-missions` 스킬이 주차별 목표와 제출물을 정리해서 안내합니다.
+첫날 장보기 skill을 1주차 첫 skill로 인정하고, `g23-missions`가 2주차 목표와 제출물을 안내합니다.
+만약 결과 첫 줄이 `실제 검색 실패 — DEMO`라면 아직 1주차를 마친 것은 아닙니다. Node 18과
+인터넷을 확인한 뒤 **“장보기 실습 다시 이어줘”**라고 말하면 실제 검색부터 이어갑니다.
 
 ---
 
@@ -37,12 +43,11 @@ Claude가 여러분의 OS, Claude Code 사용 경험, 업무를 몇 가지 물�
 .
 ├── README.md          ← 지금 읽는 파일
 ├── CLAUDE.md          ← Claude가 매 세션 참고하는 스터디 가이드
-├── examples/          ← 사용 기록·사례글 작성 양식
-├── clips/             ← 지피터스 사례 클립 (사례글 쓸 때 문체 참고자료)
+├── data/              ← 지피터스 사례 클립 (사례글 쓸 때 문체 참고자료)
 └── .claude/skills/    ← 스터디용 도우미 skill 모음 (주차별 미션은 g23-missions/reference/ 안에 있음)
 ```
 
-> `CLAUDE.local.md`는 clone 직후엔 없다가 `g23-setup` 실행 후 생깁니다 — 내 이름·업무 맥락 등 개인 정보용이라 `.gitignore` 처리돼 있고 git에는 안 실립니다.
+> `CLAUDE.local.md`는 clone 직후엔 없다가 온보딩(`g23-welcome`) 중에 생깁니다 — 내 이름·업무 맥락 등 개인 정보용이라 `.gitignore` 처리돼 있고 git에는 안 실립니다.
 
 ## 포함된 skill
 
@@ -50,10 +55,9 @@ Claude Code에게 자연어로 말하면 아래 skill들이 알아서 켜집니�
 
 | Skill | 언제 쓰나 |
 |---|---|
-| `g23-welcome` | 처음 시작할 때 — 셋업부터 첫 skill 실습까지 온보딩 (내부적으로 `g23-setup`·`g23-kskill-intro`를 순서대로 부릅니다) |
+| `g23-welcome` | 처음 시작할 때 — 초기화, 실제 장보기 skill, GPTERS 스타일 4주 로드맵 HTML, OT 초안까지 진행합니다 |
 | `g23-missions` | 이번 주 무엇을 해야 하는지 확인할 때 |
-| `g23-thinking-partner` | 내 반복 업무에서 skill 후보를 고를 때 |
-| `g23-k-skills-search` | 참고할 k-skill 사례를 찾을 때 |
+| `g23-thinking-partner` | 내 반복 업무에서 skill 후보를 고를 때 (막히면 비슷한 k-skill 사례를 자동으로 찾아 보여줍니다) |
 | `skill-creator` | 고른 후보를 실제 SKILL.md로 만들 때 |
 | `g23-case-writer` | 사용 기록으로 사례글을 쓸 때 |
 
@@ -63,11 +67,16 @@ Claude Code에게 자연어로 말하면 아래 skill들이 알아서 켜집니�
 - 각 skill의 짧은 사용 기록 (목적 / 사용 전후 / 막힌 점 / 고친 점)
 - 4주 사용 경험을 담은 사례글 1개
 
+첫날에는 장보기 skill 1개, 실제 상품 URL이 담긴 장보기 결과, `automation-roadmap.html`,
+OT 사례 게시글 초안이 먼저 남습니다. 장보기 skill을 이후에도 쓸지는 자유입니다.
+
 ---
 
 ## 참여 전 준비
 
 - Claude Code 설치 완료 ([Claude Code desktop 사용법](https://youtu.be/1VLebkCcH5I?si=vFj7k-AN0GSh3Wx2))
+- Node.js 18 이상
+- 인터넷 연결 (마켓컬리 실제 상품 검색에 사용)
 - 터미널에서 명령을 실행해본 경험
 - Claude Code로 간단한 파일 수정·문서 생성을 시도해본 경험
 - skill을 직접 만들거나 수정해본 경험

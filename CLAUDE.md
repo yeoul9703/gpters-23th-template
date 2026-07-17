@@ -15,15 +15,15 @@
 
 ## 폴더 구조
 
-- `CLAUDE.local.md` — 내 이름·업무 맥락 등 개인 정보 (`g23-setup`이 만듦). `.gitignore` 처리돼 있어 git에는 안 실린다 — 이 파일(`CLAUDE.md`)은 스터디 공용 가이드라 개인 정보를 안 담는다.
+- `CLAUDE.local.md` — 내 이름·업무 맥락 등 개인 정보. clone 직후엔 없다가 온보딩(`g23-welcome`) 중에 생긴다. `.gitignore` 처리돼 있어 git에는 안 실린다 — 이 파일(`CLAUDE.md`)은 스터디 공용 가이드라 개인 정보를 안 담는다.
+- `data/` — 지피터스 사례 클립 모음 (사례글 쓸 때 문체 참고자료, 이미 채워져 있음). "작업 지침"의 "로컬 자료"가 가리키는 게 이 폴더다.
 - `.claude/skills/g23-missions/reference/week-*.md` — 주차별 목표·제출물·체크리스트 (g23-missions 스킬이 매번 읽는 미션 원문)
-- `examples/skill-log-template.md` — skill별 사용 기록 양식
-- `examples/case-post-notes-template.md` — 사례글 작성용 메모 양식
-- `.claude/skills/` — 스터디용 도우미 skill 모음 (`g23-welcome`이 온보딩 중 `g23-setup`·`g23-kskill-intro`를 내부적으로 부름)
+- `.claude/skills/` — 스터디용 도우미 skill 모음 (`g23-welcome` 하나가 온보딩 전체 — 작업 공간 초기화부터 k-skill 체험, 미니 실습까지 — 를 진행한다)
 - 참가자가 만드는 skill도 `.claude/skills/{skill-name}/SKILL.md` 에 둔다
 
 ## 작업 지침
 
+- **최우선: 모든 안내는 비개발자·Claude Code 첫 사용자 눈높이의 쉬운 한국어로.** 참가자는 개발자가 아니고 Claude Code도 처음이다. 전문용어(터미널, git, 리포지토리, 커밋 등)를 꼭 써야 하면 바로 옆에 한 줄 풀이를 붙인다. 영어 용어를 번역 없이 그대로 두지 않는다. 설명은 짧고 간략하게 — 길게 나열하지 말고 지금 필요한 것 하나만.
 - **큰 파일을 통째로 읽지 말 것.** 지금 필요한 미션 파일이나 템플릿 하나만 확인한다. (특히 Pro 요금제 토큰 절약)
 - skill은 작게 시작한다. "15분 안에 끝낼 수 있는 범위"로 자른 뒤 만들고, 써보며 고친다.
 - 참가자 대신 결정을 내리지 말고, 선택지를 주고 고르게 한다.

@@ -7,7 +7,6 @@
 # Claude Code 로컬 설정
 .claude/settings.local.json
 /CLAUDE.local.md
-/CLAUDE.temp.md
 
 # 스터디장 전용 작업 로그 (참가자 배포본에 안 실림)
 /ticket/
