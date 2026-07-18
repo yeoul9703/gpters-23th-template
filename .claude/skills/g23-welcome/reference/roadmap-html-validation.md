@@ -1,6 +1,6 @@
 # 4주 자동화 로드맵 HTML 검증
 
-> `g23-welcome`이 `automation-roadmap.html`을 만든 직후 빠른 검사를 할 때 읽는다.
+> `g23-welcome`이 `gpters-k-skill-report-{닉네임}.html`을 만든 직후 빠른 검사를 할 때 읽는다.
 > 템플릿을 출시하기 전에는 아래 전체 항목을 데스크톱·모바일 렌더로 다시 확인한다.
 
 ## 매번 생성 직후 빠른 검사

@@ -24,15 +24,15 @@ OT 사례 초안까지 50분 흐름으로 안내합니다.
 
 ### 3. 실제 상품 URL을 확인한 뒤 2주차 미션으로 넘어갑니다
 
-`grocery-result.md`에 실제 마켓컬리 상품 URL이 있고, 장보기 skill 실행·
-`automation-roadmap.html`·OT 사례 초안까지 마쳤다면 아래처럼 말해보세요.
+`kully-result-{닉네임}.html`에 실제 마켓컬리 상품 URL이 담긴 표가 있고, 장보기 skill 실행·
+`gpters-k-skill-report-{닉네임}.html`·OT 사례 초안까지 마쳤다면 아래처럼 말해보세요.
 
 ```text
 2주차 미션 알려줘
 ```
 
 첫날 장보기 skill을 1주차 첫 skill로 인정하고, `g23-missions`가 2주차 목표와 제출물을 안내합니다.
-만약 결과 첫 줄이 `실제 검색 실패 — DEMO`라면 아직 1주차를 마친 것은 아닙니다. Node 18과
+만약 결과 표의 URL 칸이 비어 있다면(라이브 검색을 못 한 상태) 아직 1주차를 마친 것은 아닙니다. Node 18과
 인터넷을 확인한 뒤 **“장보기 실습 다시 이어줘”**라고 말하면 실제 검색부터 이어갑니다.
 
 ---
@@ -67,7 +67,7 @@ Claude Code에게 자연어로 말하면 아래 skill들이 알아서 켜집니�
 - 각 skill의 짧은 사용 기록 (목적 / 사용 전후 / 막힌 점 / 고친 점)
 - 4주 사용 경험을 담은 사례글 1개
 
-첫날에는 장보기 skill 1개, 실제 상품 URL이 담긴 장보기 결과, `automation-roadmap.html`,
+첫날에는 장보기 skill 1개, 실제 상품 URL이 담긴 `kully-result-{닉네임}.html`, `gpters-k-skill-report-{닉네임}.html`,
 OT 사례 게시글 초안이 먼저 남습니다. 장보기 skill을 이후에도 쓸지는 자유입니다.
 
 ---

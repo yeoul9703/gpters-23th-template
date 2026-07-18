@@ -6,14 +6,14 @@
 1. 처음이라면 `g23-welcome`으로 온보딩을 진행한다.
 2. 장보기 조건을 고르고 `/k-skill:market-kurly-search`로 실제 상품을 검색한다.
 3. 검색 과정을 반복하는 장보기 skill을 만들고 실제 한 번 실행한다.
-4. 내 업무 목표와 관련 지피터스 사례 2~3개를 연결한 `automation-roadmap.html`을 확인한다.
+4. 내 업무 목표와 관련 지피터스 사례 2~3개를 연결한 `gpters-k-skill-report-{닉네임}.html`을 확인한다.
 5. `g23-case-writer`로 방금 경험의 OT 사례 게시글 초안을 만든다.
 6. 시간이 남으면 skill을 수정·재실행하거나 gpters.org에 `OT 과제 (미니 사례)`로 직접 발행한다.
 
 ## 손에 남는 것
 - [ ] k-skill을 활용해 만든 **첫 번째 장보기 skill** 1개
-- [ ] 실제 상품 URL이 담긴 `grocery-result.md` 1개
-- [ ] 내 목표와 관련 사례가 담긴 `automation-roadmap.html` 1개
+- [ ] 실제 상품 URL이 담긴 `kully-result-{닉네임}.html` 1개
+- [ ] 내 목표와 관련 사례가 담긴 `gpters-k-skill-report-{닉네임}.html` 1개
 - [ ] OT 사례 게시글 초안 1개
 
 ## 멤버 과제
