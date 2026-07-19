@@ -6,7 +6,7 @@
 
 실행:  uv run .claude/skills/gpters-clipper/scripts/fetch_post.py "<게시글 URL>"
 (uv가 PEP 723 헤더를 읽어 격리 환경에 requests를 자동 설치한다 —
- setup-guide.md §2 uv 컨벤션. venv를 직접 만들 필요 없음.)
+ g23-setup/reference/setup-guide.md §3 uv 컨벤션. venv를 직접 만들 필요 없음.)
 
 왜 이렇게 가져오나:
 - gpters.org는 JS SPA라 원본 URL을 그냥 받으면 본문이 없다(실측 2026-07-14,

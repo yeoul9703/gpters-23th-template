@@ -54,7 +54,7 @@ B. **(주제/태그만 왔을 때) 후보를 사람에게 확인받는다.**
 
 ## scripts/ — 뭘 해주나
 
-둘 다 Python이고 `uv run <경로> "<url>"`로 실행한다(리포 루트 기준). uv가 의존성(requests)을 격리 환경에 자동 설치한다 — venv 세팅 불필요 (`g23-welcome/reference/setup-guide.md` §2 uv 컨벤션).
+둘 다 Python이고 `uv run <경로> "<url>"`로 실행한다(리포 루트 기준). uv가 의존성(requests)을 격리 환경에 자동 설치한다 — venv 세팅 불필요 (`g23-setup/reference/setup-guide.md` §3 uv 컨벤션).
 
 - `fetch_post.py <게시글 URL>` — 본문을 verbatim 마크다운으로 출력. gpters.org는 JS SPA라 Jina Reader를 경유하되, `x-target-selector: article.prose`로 글 콘텐츠만 뽑는다 → 사이트 헤더·네비·추천글·뉴스레터 위젯이 애초에 안 들어온다. 댓글도 같은 요소를 써서 본문 뒤에 이어질 수 있는데, 이건 의도된 트레이드오프다 — 셀렉터를 좁히면 헤딩·이미지가 형제 블록인 글에서 본문이 **소리 없이 유실**되는 걸 실측으로 확인했고, 조용한 유실보다 여분 포함이 낫다. 재시도(backoff)·rate limit(429) 대기·죽은 링크 판정·이미지 라인 제거까지 처리.
   - 알려진 한계: Jina의 렌더 스냅샷이 비결정적이라 드물게 헤딩·링크가 빠진 부분판이 온다(코드로 못 막음 — 스크립트 주석 참고). 출력이 글 분량 대비 의심스럽게 짧으면 시간을 두고 재실행해 더 긴 쪽을 쓴다.

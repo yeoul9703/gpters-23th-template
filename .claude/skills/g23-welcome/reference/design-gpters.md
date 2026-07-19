@@ -1,7 +1,7 @@
 # GPTERS HTML 디자인 가이드
 
-> welcome이 렌더링하는 HTML 산출물(장보기 결과 `kully-result-{닉네임}.html` 등)에서
-> `gpters-k-skill-report-{닉네임}.html`과 같은 GPTERS 스타일을 재사용하기 위한 참조 문서다.
+> welcome이 렌더링하는 `gpters-k-skill-report-{닉네임}.html`(4주 자동화 로드맵)에서
+> 일관된 GPTERS 스타일을 쓰기 위한 참조 문서다.
 > **필요할 때만 열어본다. 매 세션 자동으로 읽지 않는다.**
 
 ## 단일 출처
@@ -47,7 +47,7 @@ section 패딩:    clamp(22px, 4vw, 34px)
 
 ## 표(테이블)를 새로 만들 때
 
-gpters-k-skill-report-template.html에는 표 스타일이 없다(카드 위주). 장보기 결과처럼
+gpters-k-skill-report-template.html에는 표 스타일이 없다(카드 위주). 데이터 목록처럼
 표가 필요하면 위 `:root` 변수를 그대로 쓰되 아래 규칙만 맞춘다.
 
 - 헤더행 배경: `var(--gpters-primary)` / 글자색 흰색
