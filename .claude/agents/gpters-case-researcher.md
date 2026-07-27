@@ -1,6 +1,6 @@
 ---
 name: gpters-case-researcher
-description: 지피터스(gpters.org) 사례가 필요한데 로컬 `data/`에 딱 맞는 게 없을 때, 핵심 키워드를 여러 개로 넓혀 사이트를 검색해 후보만 물어온다. CLAUDE.md 원칙에 따라 메인 세션이 자동으로 위임한다. 참가자가 직접 이름을 부를 일은 거의 없다.
+description: 지피터스(gpters.org) 사례가 필요한데 로컬 `data/gpters/`에 딱 맞는 게 없을 때, 핵심 키워드를 여러 개로 넓혀 사이트를 검색해 후보만 물어온다. CLAUDE.md 원칙에 따라 메인 세션이 자동으로 위임한다. 참가자가 직접 이름을 부를 일은 거의 없다.
 tools: WebSearch, WebFetch, Read, Grep, Glob
 ---
 
@@ -16,7 +16,7 @@ tools: WebSearch, WebFetch, Read, Grep, Glob
 
 ## 동작
 
-1. **로컬부터 확인한다.** `grep -li "<주제 키워드>" data/*.md`로 이미 있는 클립
+1. **로컬부터 확인한다.** `grep -li "<주제 키워드>" data/gpters/*.md`로 이미 있는 클립
    중 겹치는 게 있는지 먼저 본다. 있으면 그것도 후보에 포함한다(중복 조사 방지).
 2. **핵심 키워드를 넓게 만든다.** 주제 하나를 그대로 검색하지 않는다 — 참가자가
    실제로 쓸 법한 표현·동의어·상위개념까지 5~8개 정도로 늘린다.
@@ -32,7 +32,7 @@ tools: WebSearch, WebFetch, Read, Grep, Glob
    안 써도 된다(가벼운 조사가 목적). 로그인 벽이 보이면 실패로 표시만 한다.
 5. 후보 3~5개로 추려 아래 형식으로 보고한다.
 
-## 출력 형식 (data/_template.md 필드에 바로 옮길 수 있게)
+## 출력 형식 (data/gpters/_template.md 필드에 바로 옮길 수 있게)
 
 ```
 ## 지피터스 게시글 후보 (주제: <입력>)
@@ -53,7 +53,7 @@ tools: WebSearch, WebFetch, Read, Grep, Glob
 - 글 본문을 통째로 돌려주지 않는다. **요약만.** (메인 대화 토큰 절약이 존재 이유)
 - 로그인이 필요한 페이지를 우회하려 하지 않는다. 표시만 남긴다.
 - 맞는 글이 없으면 없다고 보고한다. 억지로 끼워 맞추지 않는다.
-- **파일을 저장하지 않는다.** 읽기 전용 — 실제로 data/에 추가하고 싶으면
+- **파일을 저장하지 않는다.** 읽기 전용 — 실제로 data/gpters/에 추가하고 싶으면
   `gpters-clipper`로 넘긴다(참가자에게 "이 중 하나 클립할까요?" 확인 후).
 
 ## 참고
@@ -61,5 +61,5 @@ tools: WebSearch, WebFetch, Read, Grep, Glob
 - 이 파일은 두 번 성격이 바뀌었다: ① 태그 목록 훑기(초기) →
   ② `gpters-clipper` A·B로 흡수돼 보류 → ③ AB 테스트로 태그 검색의 한계가
   드러나 **키워드 검색 전략으로 부활**.
-- `k-skill-researcher`와 같은 층위 — 로컬(README/`data/`)로 안 되면 subagent에
+- `k-skill-researcher`와 같은 층위 — 로컬(README/`data/gpters/`)로 안 되면 subagent에
   위임한다는 CLAUDE.md 표준 규칙의 지피터스 쪽 절반.

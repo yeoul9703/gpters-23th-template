@@ -16,7 +16,7 @@
 ## 폴더 구조
 
 - `CLAUDE.local.md` — 내 이름·업무 맥락 등 개인 정보. clone 직후엔 없다가 온보딩(`g23-setup`) 중에 생긴다. `.gitignore` 처리돼 있어 git에는 안 실린다 — 이 파일(`CLAUDE.md`)은 스터디 공용 가이드라 개인 정보를 안 담는다.
-- `data/` — 지피터스 사례 클립 모음 (사례글 쓸 때 문체 참고자료, 이미 채워져 있음). "작업 지침"의 "로컬 자료"가 가리키는 게 이 폴더다.
+- `data/gpters/` — 지피터스 사례 클립 모음 (사례글 쓸 때 문체 참고자료, 이미 채워져 있음). "작업 지침"의 "로컬 자료"가 가리키는 게 이 폴더다.
 - `.claude/skills/g23-missions/reference/week-*.md` — 주차별 목표·제출물·체크리스트 (g23-missions 스킬이 매번 읽는 미션 원문)
 - `.claude/skills/` — 스터디용 도우미 skill 모음. 첫날 온보딩은 두 단계다: `g23-setup`이 작업 공간 초기화와 k-skill 설치·체험을, 이어서 `g23-welcome`이 업무 파악·지피터스 사례·4주 로드맵 HTML·OT 초안을 진행한다.
 - 참가자가 만드는 skill도 `.claude/skills/{skill-name}/SKILL.md` 에 둔다

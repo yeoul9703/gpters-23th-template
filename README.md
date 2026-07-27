@@ -40,7 +40,8 @@ clone한 폴더에서 `claude`를 실행하거나 Claude Code로 폴더를 엽�
 .
 ├── README.md          ← 지금 읽는 파일
 ├── CLAUDE.md          ← Claude가 매 세션 참고하는 스터디 가이드
-├── data/              ← 지피터스 사례 클립 (사례글 쓸 때 문체 참고자료)
+├── data/
+│   └── gpters/      ← 지피터스 사례 클립 (사례글 쓸 때 문체 참고자료)
 └── .claude/skills/    ← 스터디용 도우미 skill 모음 (주차별 미션은 g23-missions/reference/ 안에 있음)
 ```
 
