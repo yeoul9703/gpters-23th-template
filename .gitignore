@@ -9,6 +9,11 @@
 /CLAUDE.local.md
 
 # 스터디장 전용 작업 로그 (참가자 배포본에 안 실림)
-/ticket/
+/tasks/
 /context/
 /docs/
+/archive/
+/tmp/
+
+# 개인 데이터 (카드명세서·건강기록 등) — 절대 커밋 금지
+/data/personal/

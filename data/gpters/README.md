@@ -16,7 +16,7 @@
 
 ## 사무직 보편 업무 예시 찾기
 
-특정 직군이 아닌 사무직이면 공감할 업무(이메일·문서관리·검수·보고서·HR 등) 사례만 보고 싶으면 `tags`에 `office-general`이 붙은 클립을 찾는다 (`grep -l "office-general" data/*.md`, 25개).
+특정 직군이 아닌 사무직이면 공감할 업무(이메일·문서관리·검수·보고서·HR 등) 사례만 보고 싶으면 `tags`에 `office-general`이 붙은 클립을 찾는다 (`grep -l "office-general" data/gpters/*.md`, 25개).
 
 ## 모은 클립 (63)
 
